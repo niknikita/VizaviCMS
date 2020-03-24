@@ -30,7 +30,7 @@ namespace VizaviCMS
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -42,13 +42,6 @@ namespace VizaviCMS
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
-            routes.MapDefaultControllerRoute();
-            routes.MapControllerRoute(
-                name: "default",
-                pattern: "{culture}/{controller=Account}/{action=Login}/{id?}",
-                defaults: new { controller = "Home", action = "Index", Culture = "us" }
-            );
 
             app.UseStaticFiles(new StaticFileOptions()
             {
