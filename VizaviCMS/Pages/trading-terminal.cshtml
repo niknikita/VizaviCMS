@@ -1,0 +1,414 @@
+@page
+@inject OrchardCore.IOrchardHelper Orchard
+@{
+    ViewData["Title"] = "Trading terminal Vizavi";
+    var CultureName = @Orchard.CultureName();
+}
+
+
+    <div class="headline headline--trading-terminal">
+        @{
+            var TradingTerminal = await Orchard.GetContentItemByAliasAsync("alias:TradingTerminalBannerBlock-" + CultureName);
+            var TradingTerminalContent = TradingTerminal.Content;
+        }
+        
+        
+        <div class="headline__wrap">
+            
+            <div class="headline__content">
+                <h1 class="h2">@TradingTerminalContent.TitlePart.Title</h1>
+
+                @Html.Raw(TradingTerminalContent.HtmlBodyPart.Html)
+                
+
+                <div class="headline__actions headline-actions">
+                    
+                    <div class="headline-actions__caption">@TradingTerminalContent.TradingTerminalBannerBlock.DownloadHeader.Text</div>
+                    
+                    
+
+                    <div class="headline-actions__buttons">
+                        <a href="@TradingTerminalContent.TradingTerminalBannerBlock.WindowsDownload.Url" class="button button-mini button-red button-with-icon">
+                            <span class="button-with-icon__icon">
+                                <svg height="22" width="22">
+                                    <use xlink:href="#i_windows-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </span>
+                            <span class="button-with-icon__text">@TradingTerminalContent.TradingTerminalBannerBlock.WindowsDownload.Text</span>
+                        </a>
+                        <a href="@TradingTerminalContent.TradingTerminalBannerBlock.iOSDownload.Url" class="button button-mini button-dark button-with-icon">
+                            <span class="button-with-icon__icon">
+                                <svg height="25" width="21">
+                                    <use xlink:href="#i_apple-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </span>
+                            <span class="button-with-icon__text">@TradingTerminalContent.TradingTerminalBannerBlock.iOSDownload.Text</span>
+                        </a>
+                        <a href="@TradingTerminalContent.TradingTerminalBannerBlock.AndroidDownload.Url" class="button button-mini button-dark button-with-icon">
+                            <span class="button-with-icon__icon">
+                                <svg height="27" width="22">
+                                    <use xlink:href="#i_android-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </span>
+                            <span class="button-with-icon__text">@TradingTerminalContent.TradingTerminalBannerBlock.AndroidDownload.Text</span>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="text-terminal">
+        @{
+            var MoreTerminal = await Orchard.GetContentItemByAliasAsync("alias:MoreTradingTerminal-" + CultureName);
+            var MoreTerminalContent = MoreTerminal.Content;
+        }
+        
+        
+        <div class="text-terminal__wrap">
+            
+            <div class="text-terminal__content">
+                
+                <div class="intro-box">
+                    @Html.Raw(MoreTerminalContent.MoreTradingTerminalBlock.Title.Html)
+                    @Html.Raw(MoreTerminalContent.HtmlBodyPart.Html)
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="icon-cards icon-cards--numbers">
+                
+                <div class="icon-card">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="49" width="47">
+                                    <use xlink:href="#@MoreTerminalContent.BagPart.ContentItems[0].MoreTradingTerminalItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                            
+
+                            <div class="icon-card__icon-decor"></div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            
+                            <div class="icon-card__content-number">@MoreTerminalContent.BagPart.ContentItems[0].MoreTradingTerminalItem.count.Value</div>
+                            
+                            
+
+                            <div class="icon-card__content-description">
+                                
+                                <div class="icon-card__content-title">@MoreTerminalContent.BagPart.ContentItems[0].DisplayText</div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="43" width="50">
+                                    <use xlink:href="#@MoreTerminalContent.BagPart.ContentItems[1].MoreTradingTerminalItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            
+                            <div class="icon-card__content-number">@MoreTerminalContent.BagPart.ContentItems[1].MoreTradingTerminalItem.count.Value</div>
+                            
+                            
+
+                            <div class="icon-card__content-description">
+                                
+                                <div class="icon-card__content-title">@MoreTerminalContent.BagPart.ContentItems[1].DisplayText</div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="52" width="54">
+                                    <use xlink:href="#@MoreTerminalContent.BagPart.ContentItems[2].MoreTradingTerminalItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            
+                            <div class="icon-card__content-number">@MoreTerminalContent.BagPart.ContentItems[2].MoreTradingTerminalItem.count.Value</div>
+                            
+                            
+
+                            <div class="icon-card__content-description">
+                                
+                                <div class="icon-card__content-title">@MoreTerminalContent.BagPart.ContentItems[2].DisplayText</div>
+                                
+                                
+
+                                <div class="icon-card__content-info">
+                                    @Html.Raw(MoreTerminalContent.BagPart.ContentItems[2].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="52" width="66">
+                                    <use xlink:href="#@MoreTerminalContent.BagPart.ContentItems[3].MoreTradingTerminalItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    </use>
+                                </svg>
+                            </div>
+                            
+                            
+
+                            <div class="icon-card__icon-decor"></div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            
+                            <div class="icon-card__content-number">@MoreTerminalContent.BagPart.ContentItems[3].MoreTradingTerminalItem.count.Value</div>
+                            
+                            
+
+                            <div class="icon-card__content-description">
+                                
+                                <div class="icon-card__content-title">@MoreTerminalContent.BagPart.ContentItems[3].DisplayText</div>
+                                
+                                
+
+                                <div class="icon-card__content-info">@Html.Raw(MoreTerminalContent.BagPart.ContentItems[3].HtmlBodyPart.Html)</div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="advantage-terminal">
+        @{
+            var advantage = await Orchard.GetContentItemByAliasAsync("alias:Advantages-" + CultureName);
+            var advantageContent = advantage.Content;
+        }
+
+        
+        <div class="advantage-terminal__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(advantageContent.AdvantagesBlock.Title.Html)
+
+                @Html.Raw(advantageContent.AdvantagesBlock.Description.Html)
+            </div>
+            
+            
+
+            <div class="advantage-terminal__cards advantage-cards">
+                
+                @foreach (var item in @advantageContent.BagPart.ContentItems)
+                {
+                    <div class="advantage-card">
+                        
+                        <div class="advantage-card__box">
+                            
+                            <div class="advantage-card__icon">
+                                <svg height="@item.AdvantagesItem.iconHeight.Value" width="@item.AdvantagesItem.iconWidth.Value">
+                                    <use xlink:href="#@item.AdvantagesItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                            
+
+                            <div class="advantage-card__name">@item.TitlePart.Title</div>
+                            
+                        </div>
+                        
+                    </div>
+                }
+
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="terminal-cards">
+        
+        <div class="terminal-cards__bg"></div>
+        
+        
+        @{
+            var terminalCards = await Orchard.GetContentItemByAliasAsync("alias:Terminalcards-" + CultureName);
+            var terminalCardsContent = terminalCards.Content;
+        }
+        
+        <div class="terminal-cards__wrap">
+            
+            <div class="terminal-cards__cards">
+                
+                @foreach (var item in terminalCardsContent.BagPart.ContentItems)
+                {
+                    <div class="terminal-card">
+                        
+                        <div class="terminal-card__box">
+                            
+                            <div class="terminal-card__icon">
+                                <img alt="MetaTrader Market" height="@item.TerminalcardsItem.iconHeight.Value" width="@item.TerminalcardsItem.iconWidth.Value"
+                                     src="/media/@item.TerminalcardsItem.icon.Paths[0]"  />
+                            </div>
+                            
+                            
+
+                            <div class="terminal-card__info">@item.DisplayText</div>
+                            
+                        </div>
+                        
+                    </div>
+                }
+
+                
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="terminal-apps">
+        @{
+            var terminalDownload = await Orchard.GetContentItemByAliasAsync("alias:TerminalDownloadMetatrader-" + CultureName);
+            var terminalDownloadContent = terminalDownload.Content;
+        }
+        
+        
+        <div class="terminal-apps__wrap grid-container">
+            <div class="terminal-apps__desktop grid-container--b">
+                
+                <div class="terminal-apps__headline">
+                    @Html.Raw(terminalDownloadContent.TerminalDownloadMetatrader.Title.Html)
+                </div>
+                
+                
+
+                <div class="terminal-apps__actions">
+                    <a class="button button-mini button-red button-with-icon"
+                       href="https://download.mql5.com/cdn/web/12591/mt5/vzvimpex5setup.exe">
+                        <span class="button-with-icon__icon">
+                            <svg height="22" width="22">
+                                <use xlink:href="#i_windows-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </span> <span class="button-with-icon__text">Windows</span>
+                    </a>
+                </div>
+                
+            </div>
+
+            <div class="grid-container--a"><img alt="" src="/media/@Html.Raw(terminalDownloadContent.TerminalDownloadMetatrader.image.Paths[0])" /></div>
+
+            <div class="terminal-apps__mobile grid-container--c">
+                
+                <div class="terminal-apps__headline">
+                    @Html.Raw(terminalDownloadContent.TerminalDownloadMetatrader.Description.Html)
+                </div>
+                
+                
+
+                <div class="terminal-apps__actions">
+                    <a class="button button-mini button-dark button-with-icon"
+                       href="https://download.mql5.com/cdn/mobile/mt5/ios?server=VZVImpex-MetaTrader5">
+                        <span class="button-with-icon__icon">
+                            <svg height="25" width="21">
+                                <use xlink:href="#i_apple-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </span> <span class="button-with-icon__text">iPhone</span>
+                    </a> <a class="button button-mini button-dark button-with-icon" href="https://download.mql5.com/cdn/mobile/mt5/android?server=VZVImpex-MetaTrader5">
+                        <span class="button-with-icon__icon">
+                            <svg height="27" width="22">
+                                <use xlink:href="#i_android-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </span> <span class="button-with-icon__text">Android</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+

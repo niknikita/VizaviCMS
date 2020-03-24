@@ -1,0 +1,105 @@
+@supports (-ms-ime-align: auto) {
+    .trading-market__content.tab-container {
+        width: 100%;
+    }
+
+    .t-market-control--cfdproducts .t-market-control__name {
+        top: 67px;
+    }
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .cut-bubble-message--main:before,
+    .cut-bubble-message--main:after,
+    .advantage-terminal__cards .advantage-card::after,
+    .advantage-terminal__cards .advantage-card::before,
+    .advantage-cards--list .advantage-card::before,
+    .advantage-cards--list .advantage-card::after,
+    .advantage-cards--shadow .advantage-card::before,
+    .advantage-cards--shadow .advantage-card::after {
+        transform: skewY(-5deg);
+    }
+    .cut-bubble-message--main:before {
+        height: 370px;
+    }
+    .cut-bubble-message--main:after {
+        height: 380px;
+    }
+
+    .main-features__bg {
+        top: 10%;
+        height: 80%;
+    }
+
+    .advantage-terminal__cards .advantage-card {
+        margin-bottom: 120px;
+    }
+
+    main {
+        flex: none !important;
+    }
+
+    .check-in-circle {
+        display: block;
+    }
+
+    .advantage-card__name,
+    .number-card__content-info,
+    .number-card__content-title,
+    .advantage-cards--list .advantage-card__name,
+    .advantage-cards--list .advantage-card__body,
+    .number-cards--width-header .number-card__body,
+    .number-card__header,
+    .number-cards--width-header .number-card__header-title,
+    .company-awards__name,
+    .advantage-cards--shadow .advantage-card__body,
+    .one-click__body,
+    .list-check li,
+    .main-world__body,
+    .headline-feature__info,
+    .check-in-circle,
+    .check-in-circle li,
+    .grid-container--a img {
+        max-width: 100%;
+    }
+
+    .grid-container--a img {
+        width: 100%;
+        display: block;
+    }
+
+    .terminal-card__info,
+    .terminal-cards__cards,
+    .best-traders__cards .number-card__content,
+    .partners-steps__cards,
+    .trading-market__content,
+    .main-features__cards {
+        width: 100%;
+        width: 100%;
+    }
+
+    .contact-form__form .h2 {
+        margin-bottom: 120px;
+    }
+
+    .t-market-control--cfdproducts .t-market-control__name {
+        top: 67px;
+    }
+
+    .t-market-control--bitcoin .t-market-control__name {
+        top: 5px;
+    }
+    .one-click__bgbox {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        transform: translateY(-50%);
+        height: 700px;
+        background-color: #EA252C;
+        z-index: -1;
+    }
+}

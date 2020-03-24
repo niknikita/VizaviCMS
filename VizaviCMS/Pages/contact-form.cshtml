@@ -1,0 +1,156 @@
+@page
+@inject OrchardCore.IOrchardHelper Orchard
+@{
+    ViewData["Title"] = "Feedback Vizavi";
+    var CultureName = @Orchard.CultureName();
+}
+<title>Feedback Vizavi</title>
+@{
+    var feedback = await Orchard.GetContentItemByAliasAsync("alias:feedback-" + CultureName);
+    var feedbackContent = feedback.Content;
+}
+
+
+
+<div class="contact-form">
+    
+    <div class="contact-form__wrap">
+        <form class="form-box contact-form__form" id="contact_form">
+            
+            <div class="form-caption">
+                @Html.Raw(feedbackContent.FeedBack.Title.Html)
+                @Html.Raw(feedbackContent.FeedBack.Description.Html)
+            </div>
+            
+            
+            <div class="contact-form__form-wrap">
+                
+                <div class="flex form-row">
+                    
+                    <div class="form-group form-group--textarea">
+                                        <textarea name="message" rows="8" cols="80" class="form-control"
+                                                  placeholder="@feedbackContent.FlowPart.Widgets[0].FlowPart.Widgets[1].TextAreaPart.Placeholder"></textarea>
+                                        <div class="input_message_container input_message"></div>
+                                    </div>
+                    
+                </div>
+                
+                
+                <div class="flex form-row">
+                    
+                    <div class="form-group">
+                        <input name="name" type="text" class="form-control" placeholder="@feedbackContent.FlowPart.Widgets[0].FlowPart.Widgets[2].InputPart.Placeholder">
+                        <div class="input_message_container input_name"></div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <input name="second_name" type="text" class="form-control" placeholder="@feedbackContent.FlowPart.Widgets[0].FlowPart.Widgets[3].InputPart.Placeholder">
+                        <div class="input_message_container input_second_name"></div>
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="flex form-row">
+                    
+                    <div class="form-group">
+                        <input name="email" type="email" class="form-control" placeholder="@feedbackContent.FlowPart.Widgets[0].FlowPart.Widgets[4].InputPart.Placeholder">
+                        <div class="input_message_container input_email"></div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <input name="phone" type="tel" class="form-control" placeholder="@feedbackContent.FlowPart.Widgets[0].FlowPart.Widgets[5].InputPart.Placeholder">
+                        <div class="input_message_container input_phone"></div>
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="contact-form__form-footer">
+                    
+                    <div class="form-more">
+                        
+                        <div class="form-check">
+                            <label class="check">
+                                <input class="check__input" type="checkbox" checked required name="agreement">
+                                <span class="check__box"></span>
+                                <span class="check__name">By filling in the fields indicated above, you have consented to the processing of your  <a href="http://vps-vizavi2018.host4g.ru/docs/client-agreement.pdf">personal data</a></span>
+                                <div class="input_message_container input_checkbox"></div>
+                            </label>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="sum_notification"></div>
+                    
+                    <div class="form-action">
+                        <button type="submit" class="button button-red">@feedbackContent.FlowPart.Widgets[0].FlowPart.Widgets[7].ButtonPart.Text</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </form>
+    </div>
+    
+</div>
+
+
+<script>
+    jQuery(document).ready(function () {
+        $('#contact_form').submit(function (event) {
+            event.preventDefault();
+
+            $(event.target).find('button').attr("disabled", true);
+
+            $('#contact_form').find('.input_message_container').text('')
+
+            var form = $('#contact_form').serialize();
+
+            $.ajax({
+                type: 'post',
+                url: '/contact.php',
+                data: form,
+                dataType: 'json',
+                success: function (data) {
+                    // var obj = jQuery.parseJSON(data);
+                    console.log(data.success);
+                    if (data.success == 1) {
+                        $('#contact_form').outerHeight($('#contact_form')
+                            .outerHeight());
+                        $('#contact_form').html(
+                            '<div class="success_message"><div class="form-caption text-center"><h1 class="h2">Thank you!</h1><p>Our manager will contact you to clarify the details and answer all your questions.</p></div></div>'
+                        )
+                    } else {
+                        console.log(data.errors);
+                        $(event.target).find('button').attr("disabled", false);
+                        $.each(data.errors, function (key, value) {
+                            $('#contact_form').find(value.field).html(value
+                                .error_message)
+                        });
+                    }
+                },
+                error: function (data) {
+                    alert(
+                        'A problem has been occured! Please update the page and try to send your application one more time.'
+                    )
+                }
+            });
+        })
+    });
+</script>
+
+<style>
+
+    .form-group {
+        flex-wrap: wrap;
+    }
+
+    .input_message_container {
+        color: red;
+        font-size: 12px;
+    }
+</style>

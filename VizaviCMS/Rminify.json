@@ -1,0 +1,8 @@
+{
+  "Files": [
+    {
+      "InputPath": "Pages/Index.edit.cshtml",
+      "OutputPath": "Pages/Index.cshtml"
+    }
+  ]
+}

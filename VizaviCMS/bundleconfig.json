@@ -1,0 +1,21 @@
+[
+  {
+    "outputFileName": "wwwroot/assets/scripts/bundle.js",
+    "inputFiles": [
+      "wwwroot/assets/scripts/vendor.js",
+      "wwwroot/assets/scripts/jquery.cookie.js",
+      "wwwroot/assets/scripts/fm.revealator.jquery.js",
+      "wwwroot/assets/scripts/app.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/assets/styles/bundle.css",
+    "inputFiles": [
+      "wwwroot/assets/styles/variables.css",
+      "wwwroot/assets/styles/fonts.css",
+      "wwwroot/assets/styles/hot_rewrite.css",
+      "wwwroot/assets/styles/ie.css",
+      "wwwroot/assets/styles/style.css"
+    ]
+  }
+]

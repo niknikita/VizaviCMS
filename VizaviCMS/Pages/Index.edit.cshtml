@@ -1,0 +1,1684 @@
+@page
+@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var CultureName = @Orchard.CultureName();
+}
+
+
+
+
+
+<div class="headline-slider">
+    
+    <div class="headline-slider__list owl-carousel js_headline-slider">
+        @{
+            var banner = await Orchard.GetContentItemByAliasAsync("alias:banner-" + CultureName);
+            var bannerContent = banner.Content;
+        }
+        
+        
+        <div class="headline-slider__item">
+            
+            <div class="headline headline--infinite">
+                
+                <div class="headline__wrap">
+                    
+                    <div class="headline__content">
+                        @Html.Raw(bannerContent.BagPart.ContentItems[0].BannerItem.Title.Html)
+
+                        @Html.Raw(bannerContent.BagPart.ContentItems[0].BannerItem.Description.Html)
+
+                        @Html.Raw(bannerContent.BagPart.ContentItems[0].BannerItem.Additionaldescription.Html)
+                    </div>
+                    
+                    
+
+                    <div class="headline__actions headline-actions">
+                        
+                        <div class="headline__actions__buttons">
+                            <a class="button button-red"
+                               href="https://my.vizavi.com/registration">@bannerContent.BagPart.ContentItems[0].BannerItem.Button.Text</a>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+
+        <div class="headline-slider__item">
+            
+            <div class="headline--main headline--bitcoin">
+                
+                <div class="headline__wrap">
+                    
+                    <div class="headline__content">
+                        @Html.Raw(bannerContent.BagPart.ContentItems[1].BannerItem.Title.Html)
+
+                        @Html.Raw(bannerContent.BagPart.ContentItems[1].BannerItem.Description.Html)
+                    </div>
+                    
+                    
+
+                    <div class="headline__actions headline-actions">
+                        
+                        <div class="headline__actions__buttons">
+                            <a class="button button-red" href="https://my.vizavi.com/registration">@bannerContent.BagPart.ContentItems[1].BannerItem.Button.Text</a>
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="headline__picture">
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+
+        <div class="headline-slider__item">
+            
+            <div class="headline--main headline--fast-order">
+                
+                <div class="headline__wrap">
+                    
+                    <div class="headline__content">
+                        @Html.Raw(bannerContent.BagPart.ContentItems[2].BannerItem.Title.Html)
+
+                        @Html.Raw(bannerContent.BagPart.ContentItems[2].BannerItem.Description.Html)
+                    </div>
+                    
+                    
+
+                    <div class="headline__actions headline-actions">
+                        
+                        <div class="headline__actions__buttons">
+                            <a class="button button-red"
+                               href="https://my.vizavi.com/registration">@bannerContent.BagPart.ContentItems[2].BannerItem.Button.Text</a>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="headline__award">
+                        
+                        <div class="company-awards__box flex flex-center">
+                            
+                            @Html.Raw(bannerContent.BagPart.ContentItems[2].BannerItem.Additionaldescription.Html)  
+                            
+                            
+
+                            <div class="company-awards__type">IAFT Awards 2018</div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+
+        <div class="headline-slider__item">
+            
+            <div class="headline--main headline--keyhole">
+                
+                <div class="headline__wrap">
+                    
+                    <div class="headline__content">
+                        @Html.Raw(bannerContent.BagPart.ContentItems[3].BannerItem.Title.Html)
+
+                        @Html.Raw(bannerContent.BagPart.ContentItems[3].BannerItem.Description.Html)
+                    </div>
+                    
+                    
+
+                    <div class="headline__actions headline-actions">
+                        
+                        <div class="headline__actions__buttons">
+                            <!-- <a class="button button-red" href="javascript:void(0);">
+                            Learn more
+                        </a> -->
+                            <a class="button button-red" href="/partners">@bannerContent.BagPart.ContentItems[3].BannerItem.Button.Text</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    
+
+    <div class="headline-slider__wrap">
+        
+        <div class="headline__features headline-features">
+            @{
+                var bannerfeatures = await Orchard.GetContentItemByAliasAsync("alias:banner-features-" + CultureName);
+                var bannerfeaturesContent = bannerfeatures.Content;
+            }
+            
+            @foreach (var item in bannerfeaturesContent.BagPart.ContentItems)
+            {
+                
+                <div class="headline-feature">
+                    
+                    <div class="headline-feature__box">
+                        
+                        <div class="headline-feature__icon">
+                            <svg height="@item.BannerfeaturesItem.iconHeight.Text" width="@item.BannerfeaturesItem.iconWidth.Text">
+                                <use xlink:href="#@item.BannerfeaturesItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </div>
+                        
+                        
+
+                        <div class="headline-feature__description">
+                            
+                            <div class="headline-feature__title">@item.BannerfeaturesItem.Title.Text</div>
+                            
+                            
+
+                            <div class="headline-feature__info">@Html.Raw(item.BannerfeaturesItem.Description.Text)</div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            }
+
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="main-world">
+    
+    <div class="main-world__flag"></div>
+    
+    
+
+    <div class="main-world__bg"></div>
+    
+    
+
+    <div class="main-world__wrap">
+        
+        @{
+            var services = await Orchard.GetContentItemByAliasAsync("alias:EuropeanbrokerBlock-" + CultureName);
+        }
+        
+        <div class="intro-box">
+            @Html.Raw(services.Content.EuropeanbrokerBlock.Title.Html)
+        </div>
+        
+        
+
+        <div class="main-world__content flex flex-stretch">
+            
+            <div class="main-world__item col-half revealator-slideright revealator-once">
+                
+                <div class="main-world__content-box">
+                    
+                    <div class="main-world__title">
+                        @Html.Raw(services.Content.BagPart.ContentItems[0].Europeanbroker.Title.Html)
+                    </div>
+                    
+                    
+
+                    <div class="main-world__body body-mission">
+
+                        @Html.Raw(services.Content.BagPart.ContentItems[0].HtmlBodyPart.Html)
+
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="main-world__item col-half revealator-slideleft revealator-once">
+                
+                <div class="main-world__content-box">
+                    
+                    <div class="main-world__title">
+                        @Html.Raw(services.Content.BagPart.ContentItems[1].Europeanbroker.Title.Html)
+                    </div>
+                    
+                    
+
+                    <div class="main-world__body">
+                        @Html.Raw(services.Content.BagPart.ContentItems[1].HtmlBodyPart.Html)
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="main-features">
+    
+    <div class="main-features__bg"></div>
+    
+    
+
+    <div class="main-features__wrap">
+        
+        <div class="main-features__cards">
+            
+            <div class="icon-cards icon-cards--white">
+                @{
+                    var mainFeatures = await Orchard.GetContentItemByAliasAsync("alias:MainfeaturesBlock-" + CultureName);
+                    var mainFeature = mainFeatures.Content.BagPart.ContentItems;
+                }
+
+                
+                <div class="icon-card revealator-slideleft revealator-once">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="34" width="43">
+                                    <use xlink:href="#@mainFeature[0].Mainfeatures.iconMainfeatures.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    </use>
+                                </svg>
+                            </div>
+                            
+                            
+
+                            <div class="icon-card__icon-decor"></div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(mainFeature[0].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card revealator-slideleft revealator-once revealator-delay1">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="47" width="47">
+                                    <use xlink:href="#@mainFeature[1].Mainfeatures.iconMainfeatures.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                            
+
+                            <div class="icon-card__icon-decor"></div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(mainFeature[1].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card revealator-slideleft revealator-once revealator-delay2">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="42" width="56">
+                                    <use xlink:href="#@mainFeature[2].Mainfeatures.iconMainfeatures.Text"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                            
+
+                            <div class="icon-card__icon-decor"></div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(mainFeature[2].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card revealator-slideleft revealator-once revealator-delay3">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="46" width="46">
+                                    <use xlink:href="#@mainFeature[3].Mainfeatures.iconMainfeatures.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    </use>
+                                </svg>
+                            </div>
+                            
+                            
+
+                            <div class="icon-card__icon-decor"></div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(mainFeature[3].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="cut-bubble cut-bubble--main">
+    @{
+        var SmartphoneBlock = await Orchard.GetContentItemByAliasAsync("alias:SmartphoneBlock-" + CultureName);
+    }
+    
+    <div class="cut-bubble__wrap flex ">
+        
+        <div class="cut-bubble__message col-half cut-bubble-message cut-bubble-message--main revealator-fade revealator-once">
+            
+            <div class="cut-bubble-message__box">
+                
+                <div class="cut-bubble-message__content">
+                    <h2 class="h2">
+                        @Html.Raw(@SmartphoneBlock.Content.SmartphoneBlock.Head.Html)
+                    </h2>
+                    @Html.Raw(@SmartphoneBlock.Content.HtmlBodyPart.Html)
+                    
+
+                    <div class="cut-bubble-message__actions">
+                        <a class="button button-red"
+                           href="https://my.vizavi.com/registration">Open account</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+
+        <div class="cut-bubble__picture col-half cut-bubble-picture revealator-rotateleft revealator-once">
+            
+            <div class="cut-bubble-picture__box">
+                <picture class="picture-box">
+                    <source class="vizavi-picture" draggable="false" srcset="/assets/images/main/vizavi-phone-angle.webp,
+                    assets/images/main/vizavi-phone-angle@2x.webp 2x,
+                    assets/images/main/vizavi-phone-angle@3x.webp 3x
+                    " type="image/webp" />
+                    <img alt="" class="vizavi-picture" draggable="false"
+                         src="/assets/images/main/vizavi-phone-angle.png" srcset="/assets/images/main/vizavi-phone-angle.png,
+                    assets/images/main/vizavi-phone-angle@2x.png 2x,
+                    assets/images/main/vizavi-phone-angle@3x.png 3x
+                    " />
+                </picture>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="why-we">
+    @{
+        var WhyMe = await Orchard.GetContentItemByAliasAsync("alias:Whychooseus-" + CultureName);
+    }
+    
+    <div class="why-we__wrap">
+        
+        <div class="intro-box text-left">
+            <h2 class="h2">@WhyMe</h2>
+        </div>
+        
+        
+
+        <div class="why-we__lists">
+            
+
+            @foreach (var WhyMeItem in @WhyMe.Content.BagPart.ContentItems)
+            {
+
+                <div class="why-we__list revealator-fade revealator-once ">
+                    <h3 class="h3">@WhyMeItem.DisplayText</h3>
+
+                    <ul class="list-check">
+                        @foreach (var WhyMeSubItem in WhyMeItem.BagPart.ContentItems)
+                        {
+                            <li class="list-check__item">@Html.Raw(WhyMeSubItem.DisplayText)</li>
+                        }
+                    </ul>
+                </div>
+            }
+            
+
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="trading-market">
+    
+
+    <div class="trading-market__bg trading-market__bg-red"></div>
+    
+    
+
+    <div class="trading-market__bg trading-market__bg-light"></div>
+    
+    
+
+    <div class="trading-market__wrap">
+        
+        <div class="intro-box">
+            <h2 class="h2 mobile-visible"><span>Markets</span></h2>
+        </div>
+        
+        
+        @{
+            var markets = await Orchard.GetContentItemByAliasAsync("alias:markets-" + CultureName);
+            var marketItem = markets.Content.BagPart.ContentItems;
+        }
+
+        <div class="trading-market__content tab-container" id="trading-market-content">
+            
+            <div class="trading-market__controls col-half">
+                
+                <div class="trading-market__controls-img">
+                    <span id="is-select">
+                        <a class="t-market-control t-market-control--bitcoin is-active"
+                           href="#tm_bitcoin">
+                            <span class="t-market-control__box">
+                                <span class="t-market-control__icon">
+                                    <svg height="38" width="25">
+                                        <use xlink:href="#@marketItem[0].MARKETSItem.MARKETSicon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        </use>
+                                    </svg>
+                                </span> <span class="t-market-control__name">@Html.Raw(marketItem[0].MARKETSItem.MARKETSButton.Text)</span>
+                            </span>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="t-market-control t-market-control--currencies"
+                           href="#tm_currencies">
+                            <span class="t-market-control__box">
+                                <span class="t-market-control__icon">
+                                    <svg height="35" width="43">
+                                        <use xlink:href="#@marketItem[1].MARKETSItem.MARKETSicon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        </use>
+                                    </svg>
+                                </span> <span class="t-market-control__name">@Html.Raw(marketItem[1].MARKETSItem.MARKETSButton.Text)</span>
+                            </span>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="t-market-control t-market-control--cfdstock"
+                           href="#tm_cfdstock">
+                            <span class="t-market-control__box">
+                                <span class="t-market-control__icon">
+                                    <svg height="37" width="25">
+                                        <use xlink:href="#@marketItem[2].MARKETSItem.MARKETSicon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        </use>
+                                    </svg>
+                                </span> <span class="t-market-control__name">@Html.Raw(marketItem[2].MARKETSItem.MARKETSButton.Text)</span>
+                            </span>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="t-market-control t-market-control--cfdmetals" href="#tm_cfdmetals">
+                            <span class="t-market-control__box">
+                                <span class="t-market-control__icon">
+                                    <svg height="49" width="55">
+                                        <use xlink:href="#@marketItem[3].MARKETSItem.MARKETSicon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        </use>
+                                    </svg>
+                                </span>
+                                <span class="t-market-control__name">@Html.Raw(marketItem[3].MARKETSItem.MARKETSButton.Text)</span>
+                            </span>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="t-market-control t-market-control--cfdindexes" href="#tm_cfdindexes">
+                            <span class="t-market-control__box">
+                                <span class="t-market-control__icon">
+                                    <svg height="39" width="35">
+                                        <use xlink:href="#@marketItem[4].MARKETSItem.MARKETSicon.Text"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </span> <span class="t-market-control__name">@Html.Raw(marketItem[4].MARKETSItem.MARKETSButton.Text)</span>
+                            </span>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="t-market-control t-market-control--cfdproducts" href="#tm_cfdproducts">
+                            <span class="t-market-control__box">
+                                <span class="t-market-control__icon">
+                                    <svg height="29" width="24">
+                                        <use xlink:href="#@marketItem[5].MARKETSItem.MARKETSicon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        </use>
+                                    </svg>
+                                </span> <span class="t-market-control__name">@Html.Raw(marketItem[5].MARKETSItem.MARKETSButton.Text)</span>
+                            </span>
+                        </a>
+                    </span>
+                </div>
+                
+                
+
+                <div class="trading-market__actions">
+                    <a class="button button-light"
+                       href="https://my.vizavi.com/registration">Start trading</a>
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="trading-market__container col-half">
+                <h2 class="h2"><span>Markets</span></h2>
+                
+
+                <div class="panel-container">
+                    
+                    <div id="tm_bitcoin">
+                        
+                        <div class="trading-market__body">
+                            <h3 class="h3">@marketItem[0].DisplayText</h3>
+                            @Html.Raw(@marketItem[0].HtmlBodyPart.Html)
+                            
+
+                            <div class="trading-market__actions">
+                                <a class="button button-light"
+                                   href="https://my.vizavi.com/registration">Start trading</a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div id="tm_currencies">
+                        
+                        <div class="trading-market__body">
+                            <h3 class="h3">@marketItem[1].DisplayText</h3>
+                            @Html.Raw(@marketItem[1].HtmlBodyPart.Html)
+                            
+
+                            <div class="trading-market__actions">
+                                <a class="button button-light"
+                                   href="https://my.vizavi.com/registration">Start trading</a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div id="tm_cfdstock">
+                        
+                        <div class="trading-market__body">
+                            <h3 class="h3">@marketItem[2].DisplayText</h3>
+                            @Html.Raw(@marketItem[2].HtmlBodyPart.Html)
+                            
+
+                            <div class="trading-market__actions">
+                                <a class="button button-light"
+                                   href="https://my.vizavi.com/registration">Start trading</a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div id="tm_cfdmetals">
+                        
+                        <div class="trading-market__body">
+                            <h3 class="h3">@marketItem[3].DisplayText</h3>
+                            @Html.Raw(@marketItem[3].HtmlBodyPart.Html)
+                            
+
+                            <div class="trading-market__actions">
+                                <a class="button button-light"
+                                   href="https://my.vizavi.com/registration">Start trading</a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div id="tm_cfdindexes">
+                        
+                        <div class="trading-market__body">
+                            <h3 class="h3">@marketItem[4].DisplayText</h3>
+                            @Html.Raw(@marketItem[4].HtmlBodyPart.Html)
+                            
+
+                            <div class="trading-market__actions">
+                                <a class="button button-light"
+                                   href="https://my.vizavi.com/registration">Start trading</a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div id="tm_cfdproducts">
+                        
+                        <div class="trading-market__body">
+                            <h3 class="h3">@marketItem[5].DisplayText</h3>
+                            @Html.Raw(@marketItem[5].HtmlBodyPart.Html)
+                            
+
+                            <div class="trading-market__actions">
+                                <a class="button button-light"
+                                   href="https://my.vizavi.com/registration">Start trading</a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="popular-terminal">
+    @{
+        var popularTerminal = await Orchard.GetContentItemByAliasAsync("alias:popular-terminal-" + CultureName);
+        var popularTerminalItem = popularTerminal.Content.BagPart;
+    }
+
+    
+    <div class="popular-terminal__wrap flex">
+        
+        <div class="popular-terminal__info col-half">
+            
+            <div class="popular-terminal__headline">
+                @Html.Raw(popularTerminal.Content.POPULARTERMINAL.Title.Html)
+            </div>
+            
+            
+
+            <div class="popular-terminal__body">
+                @Html.Raw(popularTerminal.Content.HtmlBodyPart.Html)
+            </div>
+            
+            
+
+            <div class="popular-terminal__actions popular-terminal-actions">
+                
+                <div class="popular-terminal-actions__title">@popularTerminal.Content.POPULARTERMINAL.HandlerButtons.Text</div>
+                
+                
+
+                <div class="popular-terminal-actions__buttons">
+                    <a href="@popularTerminal.Content.POPULARTERMINAL.WindowsDownload.Text"
+                       class="button button-mini button-red button-with-icon">
+                        <span class="button-with-icon__icon">
+                            <svg height="30" width="30">
+                                <use xlink:href="#i_windows-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </span>
+                        <span class="button-with-icon__text">Windows</span>
+                    </a>
+                    <a href="@popularTerminal.Content.POPULARTERMINAL.iOSDownload.Text"
+                       class="button button-mini button-red button-with-icon">
+                        <span class="button-with-icon__icon">
+                            <svg height="26" width="20">
+                                <use xlink:href="#i_apple-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </span>
+                        <span class="button-with-icon__text">iPhone</span>
+                    </a>
+                    <a href="@popularTerminal.Content.POPULARTERMINAL.AndroidDownload.Text"
+                       class="button button-mini button-red button-with-icon">
+                        <span class="button-with-icon__icon">
+                            <svg height="36" width="29">
+                                <use xlink:href="#i_android-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </span>
+                        <span class="button-with-icon__text">Android</span>
+                    </a>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+
+        <div class="popular-terminal__screen col-half">
+            <picture class="picture-box">
+                <source class="metatrader-picture" draggable="false" type="image/webp" />
+                <img alt="" class="metatrader-picture" draggable="false"
+                     src="/media/@popularTerminal.Content.POPULARTERMINAL.image.Paths[0]" />
+            </picture>
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+@{
+    var security = await Orchard.GetContentItemByAliasAsync("alias:securityBlock-" + CultureName);
+    var securityItem = security.Content;
+}
+
+<div class="security-of-means">
+    
+    <div class="security-of-means__wrap flex">
+        
+        <div class="security-of-means__content">
+            
+            <div class="intro-box text-left p-decor">
+                @Html.Raw(securityItem.securityBlock.Title.Html)
+
+                @Html.Raw(securityItem.HtmlBodyPart.Html)
+            </div>
+            
+        </div>
+        
+        
+
+        <div class="security-of-means__cards">
+            
+            <div class="icon-cards icon-cards--black _horizontal_scroll_mobile_sm" data-mobile_items="1"
+                 data-stage_padding="1">
+                
+                <div class="icon-card revealator-slideright revealator-once">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="35" width="40">
+                                    <use xlink:href="#@securityItem.BagPart.ContentItems[0].securityItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(securityItem.BagPart.ContentItems[0].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card revealator-slideright revealator-once">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="38" width="41">
+                                    <use xlink:href="#@securityItem.BagPart.ContentItems[1].securityItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    </use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(securityItem.BagPart.ContentItems[1].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card revealator-slideright revealator-once">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="46" width="31">
+                                    <use xlink:href="#@securityItem.BagPart.ContentItems[2].securityItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    </use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(securityItem.BagPart.ContentItems[2].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card revealator-slideright revealator-once">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="42" width="40">
+                                    <use xlink:href="#@securityItem.BagPart.ContentItems[3].securityItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    </use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(securityItem.BagPart.ContentItems[3].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card revealator-slideright revealator-once">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="49" width="40">
+                                    <use xlink:href="#@securityItem.BagPart.ContentItems[4].securityItem.icon.Text"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(securityItem.BagPart.ContentItems[4].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="icon-card revealator-slideright revealator-once">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="47" width="47">
+                                    <use xlink:href="#@securityItem.BagPart.ContentItems[5].securityItem.icon.Text"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(securityItem.BagPart.ContentItems[5].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="one-click">
+    @{
+        var Steps = await Orchard.GetContentItemByAliasAsync("alias:stepsBlock-" + CultureName);
+        var StepItem = Steps.Content;
+    }
+    
+    <div class="one-click__bg"></div>
+    
+    
+
+    <div class="one-click__bgbox"></div>
+    
+    
+
+    <div class="owl-wrap_outside">
+        <div class="one-click__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(StepItem.HtmlBodyPart.Html)
+            </div>
+            
+            <div class="one-click__wrap-inside">
+                
+                <div class="one-click__cards">
+                    
+                    <div class="one-click__item revealator-slideleft revealator-once">
+                        
+                        <div class="one-click__box">
+                            
+                            <div class="one-click__content">
+                                
+                                <div class="one-click__icon">
+                                    <svg height="80" width="85">
+                                        <use xlink:href="#@StepItem.BagPart.ContentItems[0].SteppItem.icon.Text"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="one-click__step">@StepItem.BagPart.ContentItems[0].DisplayText</div>
+                                
+                                
+
+                                <div class="one-click__body">
+                                    @Html.Raw(StepItem.BagPart.ContentItems[0].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="one-click__item revealator-slideleft revealator-delay1 revealator-once">
+                        
+                        <div class="one-click__box">
+                            
+                            <div class="one-click__content">
+                                
+                                <div class="one-click__icon">
+                                    <svg height="54" width="52">
+                                        <use xlink:href="#@StepItem.BagPart.ContentItems[1].SteppItem.icon.Text"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="one-click__step">@StepItem.BagPart.ContentItems[1].DisplayText</div>
+                                
+                                
+
+                                <div class="one-click__body">
+                                    @Html.Raw(StepItem.BagPart.ContentItems[1].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="one-click__item revealator-slideleft revealator-delay2 revealator-once">
+                        
+                        <div class="one-click__box">
+                            
+                            <div class="one-click__content">
+                                
+                                <div class="one-click__icon">
+                                    <svg height="62" width="62">
+                                        <use xlink:href="#@StepItem.BagPart.ContentItems[2].SteppItem.icon.Text"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="one-click__step">@StepItem.BagPart.ContentItems[2].DisplayText</div>
+                                
+                                
+
+                                <div class="one-click__body">
+                                    @Html.Raw(StepItem.BagPart.ContentItems[2].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="one-click__item revealator-slideleft revealator-delay3 revealator-once">
+                        
+                        <div class="one-click__box">
+                            
+                            <div class="one-click__content">
+                                
+                                <div class="one-click__icon">
+                                    <svg height="63" width="60">
+                                        <use xlink:href="#@StepItem.BagPart.ContentItems[3].SteppItem.icon.Text"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="one-click__step">@StepItem.BagPart.ContentItems[3].DisplayText</div>
+                                
+                                
+
+                                <div class="one-click__body">
+                                    @Html.Raw(StepItem.BagPart.ContentItems[3].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<div class="top-traders">
+    
+    <div class="top-traders__bg"></div>
+    
+    
+    @{
+        var Traiders = await Orchard.GetContentItemByAliasAsync("alias:Traders-" + CultureName);
+        var TraiderItem = Traiders.Content;//CultureName
+        var ConnectedInvestors = "Connected investors";
+        var TradersProfit = "Trader's profit";
+        var YourProfit = "Your profit";
+        if (CultureName == "ru-RU")
+        {
+            ConnectedInvestors = "Подключенных инвесторов";
+            TradersProfit = "Прибыль трейдера";
+            YourProfit = "Ваша прибыль";
+        }
+
+    }
+    
+    <div class="owl-wrap_outside">
+        <div class="top-traders__wrap flex">
+            
+            <div class="top-traders__info">
+                
+                <div class="intro-box text-left intro-box--dark">
+                    @Html.Raw(TraiderItem.TradersBlock.Title.Html)
+
+                    @Html.Raw(TraiderItem.HtmlBodyPart.Html)
+                    
+
+                    <div class="top-traders__actions mobile-hidden">
+                        <a class="button button-red" href="https://my.vizavi.com/registration">@TraiderItem.TradersBlock.ButtonCopyTransaction.Text</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="top-traders__list">
+                
+                <div class="traders-slider__left js_slider-left">
+                    <svg fill="none" height="38" width="22"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.523 20.22l17.143 16.902c.762.751 1.905.751 2.667 0 .38-.188.571-.751.571-1.315 0-.563-.19-.939-.571-1.314L5.523 18.906l15.81-15.587c.38-.375.571-.751.571-1.314 0-.564-.19-.94-.571-1.315C20.952.314 20.57.127 20 .127c-.572 0-.953.187-1.334.563L1.523 17.591c-.38.376-.571.752-.571 1.315s.19 1.127.571 1.315z"
+                              fill="currentColor"></path>
+                    </svg>
+                </div>
+                
+                
+
+                <div class="traders-list js_traders-list-main owl-carousel">
+
+                    <div class="traders-list__item">
+                        <div class="trader-card">
+                            <div class="trader-card__box">
+
+                                <div class="trader-card__avatar">
+                                    <img alt="Trader Nikita_Profit" height=""
+                                         src="/assets/images/svg/user-avatar.svg" width="" />
+                                </div>
+
+                                <div class="trader-card__header">
+                                    <div class="trader-card__header-name">@TraiderItem.BagPart.ContentItems[0].DisplayText</div>
+                                </div>
+
+                                <div class="trader-card__graph">
+                                    <div class="trader-card__graph-box graph-container" id="graph-container_5"
+                                         data-graph="[7, 8, 9, 6, 10]">
+                                    </div>
+                                </div>
+
+                                <div class="trader-card__body">
+
+                                    <div class="trader-card__row trader-card__row--full">
+                                        <div class="trader-card__name">@ConnectedInvestors</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[0].traderItem.Connectedinvestors.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row">
+                                        <div class="trader-card__name">@TradersProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[0].traderItem.Tradersprofit.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row is-accent">
+                                        <div class="trader-card__name">@YourProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[0].traderItem.Yourprofit.Text</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traders-list__item">
+                        <div class="trader-card">
+                            <div class="trader-card__box">
+
+                                <div class="trader-card__avatar">
+                                    <img alt="Trader RecordsMan" height=""
+                                         src="/assets/images/svg/user-avatar.svg" width="" />
+                                </div>
+
+                                <div class="trader-card__header">
+                                    <div class="trader-card__header-name">@TraiderItem.BagPart.ContentItems[1].DisplayText</div>
+                                </div>
+
+                                <div class="trader-card__graph">
+                                    <div class="trader-card__graph-box graph-container" id="graph-container_6"
+                                         data-graph="[7, 6, 5, 7, 8]">
+                                    </div>
+                                </div>
+
+                                <div class="trader-card__body">
+
+                                    <div class="trader-card__row trader-card__row--full">
+                                        <div class="trader-card__name">@ConnectedInvestors</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[1].traderItem.Connectedinvestors.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row">
+                                        <div class="trader-card__name">@TradersProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[1].traderItem.Tradersprofit.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row is-accent">
+                                        <div class="trader-card__name">@YourProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[1].traderItem.Yourprofit.Text</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traders-list__item">
+                        <div class="trader-card">
+                            <div class="trader-card__box">
+
+                                <div class="trader-card__avatar">
+                                    <img alt="Trader Pasha_VIP" height="" src="/assets/images/svg/user-avatar.svg"
+                                         width="" />
+                                </div>
+
+                                <div class="trader-card__header">
+                                    <div class="trader-card__header-name">@TraiderItem.BagPart.ContentItems[2].DisplayText</div>
+                                </div>
+
+                                <div class="trader-card__graph">
+                                    <div class="trader-card__graph-box graph-container" id="graph-container_7"
+                                         data-graph="[5, 8, 5, 3, 4]">
+                                    </div>
+                                </div>
+
+                                <div class="trader-card__body">
+
+                                    <div class="trader-card__row trader-card__row--full">
+                                        <div class="trader-card__name">@ConnectedInvestors</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[2].traderItem.Connectedinvestors.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row">
+                                        <div class="trader-card__name">@TradersProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[2].traderItem.Tradersprofit.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row is-accent">
+                                        <div class="trader-card__name">@YourProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[2].traderItem.Yourprofit.Text</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traders-list__item">
+                        <div class="trader-card">
+                            <div class="trader-card__box">
+
+                                <div class="trader-card__avatar">
+                                    <img alt="Trader Gold_Digger" height=""
+                                         src="/assets/images/svg/user-avatar.svg" width="" />
+                                </div>
+
+                                <div class="trader-card__header">
+                                    <div class="trader-card__header-name">@TraiderItem.BagPart.ContentItems[3].DisplayText</div>
+                                </div>
+
+                                <div class="trader-card__graph">
+                                    <div class="trader-card__graph-box graph-container" id="graph-container_2"
+                                         data-graph="[5, 4, 6, 5, 7]">
+                                    </div>
+                                </div>
+
+                                <div class="trader-card__body">
+
+                                    <div class="trader-card__row trader-card__row--full">
+                                        <div class="trader-card__name">@ConnectedInvestors</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[3].traderItem.Connectedinvestors.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row">
+                                        <div class="trader-card__name">@TradersProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[3].traderItem.Tradersprofit.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row is-accent">
+                                        <div class="trader-card__name">@YourProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[3].traderItem.Yourprofit.Text</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traders-list__item">
+                        <div class="trader-card">
+                            <div class="trader-card__box">
+
+                                <div class="trader-card__avatar">
+                                    <img alt="Trader MoneyHunt" height=""
+                                         src="/assets/images/svg/user-avatar.svg" width="" />
+                                </div>
+
+                                <div class="trader-card__header">
+                                    <div class="trader-card__header-name">@TraiderItem.BagPart.ContentItems[4].DisplayText</div>
+                                </div>
+
+                                <div class="trader-card__graph">
+                                    <div class="trader-card__graph-box graph-container" id="graph-container_4"
+                                         data-graph="[6, 8, 7, 8, 10]">
+                                    </div>
+                                </div>
+
+                                <div class="trader-card__body">
+
+                                    <div class="trader-card__row trader-card__row--full">
+                                        <div class="trader-card__name">@ConnectedInvestors</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[4].traderItem.Connectedinvestors.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row">
+                                        <div class="trader-card__name">@TradersProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[4].traderItem.Tradersprofit.Text</div>
+                                    </div>
+
+                                    <div class="trader-card__row is-accent">
+                                        <div class="trader-card__name">@YourProfit</div>
+                                        <div class="trader-card__value">@TraiderItem.BagPart.ContentItems[4].traderItem.Yourprofit.Text</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+
+                <div class="traders-slider__right js_slider-right">
+                    <svg fill="none" height="38" width="22"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.332 17.78L4.19.877c-.762-.751-1.904-.751-2.666 0-.381.188-.572.751-.572 1.315 0 .563.19.939.572 1.314l15.81 15.587-15.81 15.587c-.381.376-.572.751-.572 1.315 0 .563.19.938.572 1.314.38.376.762.563 1.333.563s.952-.187 1.333-.563l17.143-16.901c.381-.376.572-.752.572-1.315s-.19-1.127-.572-1.315z"
+                              fill="currentColor"></path>
+                    </svg>
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="top-traders__actions mobile-visible">
+                <a class="button button-red"
+                   href="https://my.vizavi.com/registration">Copy transactions</a>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+
+
+<div class="start-trading">
+    @{
+        var StartTrading = await Orchard.GetContentItemByAliasAsync("alias:StartTrading-" + CultureName);
+        var StartTradingItem = StartTrading.Content;
+    }
+    <div class="owl-wrap_outside">
+        
+        <div class="start-trading__wrap">
+            
+            
+            <div class="intro-box slash">
+                @Html.Raw(StartTradingItem.HtmlBodyPart.Html)
+            </div>
+            
+            
+
+            <div class="start-trading__cards">
+                
+                <div class="advantage-cards advantage-cards--shadow">
+                    
+                    <div class="advantage-card revealator-slideright revealator-once">
+                        
+                        <div class="advantage-card__shadow">
+                            
+                            <div class="advantage-card__box">
+                                
+                                <div class="advantage-card__icon">
+                                    <svg height="62" width="79">
+                                        <use xlink:href="#@StartTradingItem.BagPart.ContentItems[0].StartTradingItem.icon.Text"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="advantage-card__name">@StartTradingItem.BagPart.ContentItems[0].DisplayText</div>
+                                
+                                
+
+                                <div class="advantage-card__body new-line">
+                                    @Html.Raw(StartTradingItem.BagPart.ContentItems[0].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="advantage-card revealator-slideright revealator-once">
+                        
+                        <div class="advantage-card__shadow">
+                            
+                            <div class="advantage-card__box">
+                                
+                                <div class="advantage-card__icon">
+                                    <svg height="65" width="49">
+                                        <use xlink:href="#@StartTradingItem.BagPart.ContentItems[1].StartTradingItem.icon.Text"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="advantage-card__name">@StartTradingItem.BagPart.ContentItems[1].DisplayText</div>
+                                
+                                
+
+                                <div class="advantage-card__body">
+                                    @Html.Raw(StartTradingItem.BagPart.ContentItems[1].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="advantage-card revealator-slideleft revealator-once">
+                        
+                        <div class="advantage-card__shadow">
+                            
+                            <div class="advantage-card__box">
+                                
+                                <div class="advantage-card__icon">
+                                    <svg height="65" width="66">
+                                        <use xlink:href="#@StartTradingItem.BagPart.ContentItems[2].StartTradingItem.icon.Text"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="advantage-card__name">@StartTradingItem.BagPart.ContentItems[2].DisplayText</div>
+                                
+                                
+
+                                <div class="advantage-card__body new-line">
+                                    @Html.Raw(StartTradingItem.BagPart.ContentItems[2].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="advantage-card revealator-slideleft revealator-once">
+                        
+                        <div class="advantage-card__shadow">
+                            
+                            <div class="advantage-card__box">
+                                
+                                <div class="advantage-card__icon">
+                                    <svg height="63" width="70">
+                                        <use xlink:href="#@StartTradingItem.BagPart.ContentItems[3].StartTradingItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        </use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="advantage-card__name">@StartTradingItem.BagPart.ContentItems[3].DisplayText</div>
+                                
+                                
+
+                                <div class="advantage-card__body">
+                                    @Html.Raw(StartTradingItem.BagPart.ContentItems[3].HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="company-awards company-awards--home">
+    
+    <div class="company-awards__bg"></div>
+    
+    
+    @{
+        var awards = await Orchard.GetContentItemByAliasAsync("alias:awards-" + CultureName);
+        var awardsItem = awards.Content;
+    }
+    
+    <div class="company-awards__wrap">
+        
+        
+        <div class="company-awards__list flex flex-stretch flex-center _horizontal_scroll_mobile_sm revealator-fade "
+             data-mobile_items="1" data-stage_padding="0">
+            @foreach (var item in awardsItem.BagPart.ContentItems)
+            {
+                
+                <div class="company-awards__item">
+                    
+                    <div class="company-awards__box flex flex-center">
+                        
+                        <div class="company-awards__name">@item.AwardsItem.Description.Text</div>
+                        
+                        
+
+                        <div class="company-awards__type">@item.AwardsItem.footertext.Text</div>
+                        
+                    </div>
+                    
+                </div>
+                
+            }
+            
+        </div>
+        
+    </div>
+    
+</div>

@@ -1,0 +1,336 @@
+﻿@page
+@inject OrchardCore.IOrchardHelper Orchard
+@{
+    ViewData["Title"] = "About Vizavi";
+    var CultureName = @Orchard.CultureName();
+}
+
+
+    <div class="headline headline--about">
+        @{
+            var aboutCompany = await Orchard.GetContentItemByAliasAsync("alias:about-company-" + CultureName);
+            var aboutCompanyContent = aboutCompany.Content;
+        }
+        
+        
+        <div class="headline__wrap">
+            
+            <div class="headline__content">
+                <h1 class="h2">@aboutCompanyContent.TitlePart.Title</h1>
+                @Html.Raw(aboutCompanyContent.HtmlBodyPart.Html)
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+<div class="text-about">
+    
+    <div class="text-about__wrap">
+        @{
+            var aboutqoute = await Orchard.GetContentItemByAliasAsync("alias:aboute-qoute-" + CultureName);
+            var aboutqouteContent = aboutqoute.Content;
+        }
+        
+        
+        <div class="text-about__content text-content">
+            @Html.Raw(aboutqouteContent.aboutqouteBlock.Description.Html)
+            
+
+            <div class="text-about__quote flex flex-center">
+                
+                <div class="text-about__quote-photo">
+                    <img alt="Charles Kane"
+                         src="/media/@aboutqouteContent.aboutqouteBlock.photo.Paths[0]" />
+                </div>
+                
+                
+
+                <div class="text-about__quote-text">
+                    <blockquote class="blockquote">
+                        @Html.Raw(aboutqouteContent.aboutqouteBlock.qoute.Html)
+
+                        <footer><cite>@aboutqouteContent.aboutqouteBlock.quoteauthor.Text</cite></footer>
+                        <img src="/media/@aboutqouteContent.aboutqouteBlock.signature.Paths[0]" alt="" class="imzo" style="max-width: 170px;"><br clear="all">
+                    </blockquote>
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="caption-row">
+                @{
+                    var aboutVizaviServices = await Orchard.GetContentItemByAliasAsync("alias:AboutVizaviService-" + CultureName);
+                    var aboutVizaviServicesContent = aboutVizaviServices.Content;
+                }
+                
+                
+                <div class="caption-row__title">
+                    @Html.Raw(aboutVizaviServicesContent.AboutVizaviServices.title.Html)
+                </div>
+                
+                
+                <div class="caption-row__text">
+                    @Html.Raw(aboutVizaviServicesContent.AboutVizaviServices.Description.Html)
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+
+        <div class="icon-cards">
+            @foreach (var item in aboutVizaviServicesContent.BagPart.ContentItems)
+            {
+                
+                <div class="icon-card">
+                    
+                    <div class="icon-card__box">
+                        
+                        <div class="icon-card__icon">
+                            
+                            <div class="icon-card__icon-ico">
+                                <svg height="@item.AboutVizaviServiceItem.iconHeight.Text" width="@item.AboutVizaviServiceItem.iconWidth.Text">
+                                    <use xlink:href="#@item.AboutVizaviServiceItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                            
+
+                            <div class="icon-card__icon-decor"></div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="icon-card__content">
+                            @Html.Raw(item.HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            }
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="double-background">
+    @{
+        var aboutLoyalty = await Orchard.GetContentItemByAliasAsync("alias:abouteLoyalty-" + CultureName);
+        var aboutLoyaltyContent = aboutLoyalty.Content;
+    }
+    
+    
+    <div class="double-background__wrap flex">
+        
+        <div class="col-half flex flex-center double-background__caption">
+            <h2 class="h2">@aboutLoyaltyContent.TitlePart.Title</h2>
+        </div>
+        
+        
+
+        <div class="col-half flex flex-center double-background__info">
+            @Html.Raw(aboutLoyaltyContent.HtmlBodyPart.Html)
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="growth-plan">
+    @{
+        var companydevelopment = await Orchard.GetContentItemByAliasAsync("alias:company-development-plan-" + CultureName);
+        var companydevelopmentContent = companydevelopment.Content;
+    }
+    
+    
+    <div class="growth-plan__wrap">
+        
+        <div class="intro-box">
+            @Html.Raw(companydevelopmentContent.CompanydevelopmentPlanBlock.Title.Html)
+        </div>
+        
+        
+
+        <div class="growth-plan__list">
+            <ul class="plan-list">
+                @foreach (var item in companydevelopmentContent.BagPart.ContentItems)
+                {
+                    <li class="plan-list__item">
+                        <div class="plan-list__box">
+                            <div class="plan-list__content">
+                                <div class="plan-list__year">@item.DisplayText</div>
+
+                                <div class="plan-list__description">
+                                    @Html.Raw(item.HtmlBodyPart.Html)
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                }
+                
+            </ul>
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="business-model">
+    @{
+        var businessmodel = await Orchard.GetContentItemByAliasAsync("alias:business-model-" + CultureName);
+        var businessmodelContent = businessmodel.Content;
+    }
+    
+    
+    <div class="business-model__wrap">
+        
+        <div class="intro-box">
+            <h2 class="h2">@businessmodelContent.TitlePart.Title</h2>
+        </div>
+        
+        
+
+        <div class="business-model__bg flex flex-stretch">
+            
+            <div class="business-model__quote flex flex-center">
+                <blockquote class="blockquote">
+                    @Html.Raw(businessmodelContent.BusinessmodelBlock.qoute.Html)
+
+                    <footer><cite>@businessmodelContent.BusinessmodelBlock.qouteauth.Text</cite></footer>
+                </blockquote>
+            </div>
+            
+            
+
+            <div class="business-model__info flex flex-center">
+                @Html.Raw(businessmodelContent.BusinessmodelBlock.Description.Html)
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="our-value">
+    @{
+        var ourValue = await Orchard.GetContentItemByAliasAsync("alias:Our-value-" + CultureName);
+        var ourValueContent = ourValue.Content;
+    }
+    
+    
+    <div class="our-value__wrap">
+        
+        <div class="intro-box">
+            @Html.Raw(ourValueContent.OurvalueBlock.Title.Html)
+
+            @Html.Raw(ourValueContent.OurvalueBlock.Descriptiontop.Html)
+        </div>
+        
+        
+
+        <div class="our-value__cards number-cards">
+            @{int numberItem = 1;}
+            @foreach (var item in ourValueContent.BagPart.ContentItems)
+            {
+                
+                <div class="number-card">
+                    
+                    <div class="number-card__box">
+                        
+                        <div class="number-card__number">@numberItem</div>
+                        
+                        
+
+                        <div class="number-card__content">
+                            @Html.Raw(item.HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                numberItem++;
+            }
+            
+        </div>
+        
+        
+
+        <div class="intro-box">
+            @Html.Raw(ourValueContent.OurvalueBlock.Descriptionbutton.Html)
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+<div class="company-awards ">
+    @{
+        var aboutCompanyawards = await Orchard.GetContentItemByAliasAsync("alias:about-Company-awards-" + CultureName);
+        var aboutCompanyawardsContent = aboutCompanyawards.Content;
+    }
+    
+    
+    <div class="company-awards__bg"></div>
+    
+    
+
+    <div class="company-awards__wrap">
+        
+        <div class="intro-box">
+            @Html.Raw(aboutCompanyawardsContent.AboutCompanyAwards.Title.Html)
+
+            @Html.Raw(aboutCompanyawardsContent.AboutCompanyAwards.Description.Html)
+        </div>
+        
+        
+
+        <div class="company-awards__list flex flex-stretch flex-center _horizontal_scroll_mobile_sm"
+             data-mobile_items="1" data-stage_padding="0">
+
+            @foreach (var item in aboutCompanyawardsContent.BagPart.ContentItems)
+            {
+                
+                <div class="company-awards__item">
+                    
+                    <div class="company-awards__box flex flex-center">
+                        
+                        <div class="company-awards__name">@item.AwardsItem.Description.Text</div>
+                        
+                        
+
+                        <div class="company-awards__type">@item.AwardsItem.footertext.Text</div>
+                        
+                    </div>
+                    
+                </div>
+                
+            }
+            
+        </div>
+        
+    </div>
+    
+</div>
+

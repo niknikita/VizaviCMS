@@ -1,0 +1,6726 @@
+{
+  "ContentTypeDefinitionRecords": [
+    {
+      "Name": "Menu",
+      "DisplayName": "Menu",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "AliasPartSettings": {
+              "Pattern": "{{ ContentItem | display_text | slugify }}"
+            },
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "MenuPart",
+          "Name": "MenuPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "MenuItemsListPart",
+          "Name": "MenuItemsListPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "LinkMenuItem",
+      "DisplayName": "Link Menu Item",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "MenuItem"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "LinkMenuItemPart",
+          "Name": "LinkMenuItemPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "LinkMenuItem",
+          "Name": "LinkMenuItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Form",
+      "DisplayName": "Form",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "Widget"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {}
+        },
+        {
+          "PartName": "FormPart",
+          "Name": "FormPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "FlowPart",
+          "Name": "FlowPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "Label",
+      "DisplayName": "Label",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "Widget"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {}
+        },
+        {
+          "PartName": "FormElementPart",
+          "Name": "FormElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "LabelPart",
+          "Name": "LabelPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "Input",
+      "DisplayName": "Input",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "Widget"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "FormInputElementPart",
+          "Name": "FormInputElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "FormElementPart",
+          "Name": "FormElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "InputPart",
+          "Name": "InputPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "TextArea",
+      "DisplayName": "Text Area",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "Widget"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "FormInputElementPart",
+          "Name": "FormInputElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "FormElementPart",
+          "Name": "FormElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "TextAreaPart",
+          "Name": "TextAreaPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "Select",
+      "DisplayName": "Select",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "Widget"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "FormInputElementPart",
+          "Name": "FormInputElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "FormElementPart",
+          "Name": "FormElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "SelectPart",
+          "Name": "SelectPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "Button",
+      "DisplayName": "Button",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "Widget"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "FormInputElementPart",
+          "Name": "FormInputElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "FormElementPart",
+          "Name": "FormElementPart",
+          "Settings": {}
+        },
+        {
+          "PartName": "ButtonPart",
+          "Name": "ButtonPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "ValidationSummary",
+      "DisplayName": "Validation Summary",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "Widget"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "ValidationSummaryPart",
+          "Name": "ValidationSummaryPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "Validation",
+      "DisplayName": "Validation",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Stereotype": "Widget"
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "ValidationPart",
+          "Name": "ValidationPart",
+          "Settings": {}
+        }
+      ]
+    },
+    {
+      "Name": "Taxonomy",
+      "DisplayName": "Taxonomy",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true
+        }
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            },
+            "AliasPartSettings": {
+              "Pattern": "{{ Model.ContentItem | display_text | slugify }}"
+            }
+          }
+        },
+        {
+          "PartName": "TaxonomyPart",
+          "Name": "TaxonomyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Mainmenu",
+      "DisplayName": "Main-menu",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Mainmenu",
+          "Name": "Mainmenu",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LinkMenuItemPart",
+          "Name": "LinkMenuItemPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Service",
+      "DisplayName": "Service",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Service",
+          "Name": "Service",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Services",
+      "DisplayName": "Services",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Services",
+          "Name": "Services",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "Service"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Europeanbroker",
+      "DisplayName": "European broker",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Europeanbroker",
+          "Name": "Europeanbroker",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "EuropeanbrokerBlock",
+      "DisplayName": "European broker Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "EuropeanbrokerBlock",
+          "Name": "EuropeanbrokerBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "Europeanbroker"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Mainfeatures",
+      "DisplayName": "Main features",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Mainfeatures",
+          "Name": "Mainfeatures",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MainfeaturesBlock",
+      "DisplayName": "Main features Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "MainfeaturesBlock",
+          "Name": "MainfeaturesBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "Mainfeatures"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SmartphoneBlock",
+      "DisplayName": "SmartphoneBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "SmartphoneBlock",
+          "Name": "SmartphoneBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Whychooseus",
+      "DisplayName": "Why choose us?",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Whychooseus",
+          "Name": "Whychooseus",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "Whychooseusitem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Whychooseusitem",
+      "DisplayName": "Why choose us item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Whychooseusitem",
+          "Name": "Whychooseusitem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "2"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "WhychooseusSubItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "WhychooseusSubItem",
+      "DisplayName": "Why choose us SubItem",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "WhychooseusSubItem",
+          "Name": "WhychooseusSubItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MARKETSItem",
+      "DisplayName": "MARKETS Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "MARKETSItem",
+          "Name": "MARKETSItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MARKETSMARKETSBLOCK",
+      "DisplayName": "MARKETS",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "MARKETSMARKETSBLOCK",
+          "Name": "MARKETSMARKETSBLOCK",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "MARKETSItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "POPULARTERMINAL",
+      "DisplayName": "Popular Terminal",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "POPULARTERMINAL",
+          "Name": "POPULARTERMINAL",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "securityItem",
+      "DisplayName": "securityItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "securityItem",
+          "Name": "securityItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "securityBlock",
+      "DisplayName": "securityBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "securityBlock",
+          "Name": "securityBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "securityItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "StepsBlock",
+      "DisplayName": "Steps Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "StepsBlock",
+          "Name": "StepsBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "SteppItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SteppItem",
+      "DisplayName": "SteppItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "SteppItem",
+          "Name": "SteppItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "traderItem",
+      "DisplayName": "traderItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "traderItem",
+          "Name": "traderItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TradersBlock",
+      "DisplayName": "Traders Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TradersBlock",
+          "Name": "TradersBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "traderItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "StartTradingBlock",
+      "DisplayName": "StartTradingBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "StartTradingBlock",
+          "Name": "StartTradingBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "StartTradingItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "StartTradingItem",
+      "DisplayName": "StartTradingItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "StartTradingItem",
+          "Name": "StartTradingItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AwardsBlock",
+      "DisplayName": "AwardsBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AwardsBlock",
+          "Name": "AwardsBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "AwardsItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AwardsItem",
+      "DisplayName": "AwardsItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AwardsItem",
+          "Name": "AwardsItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TRADINGACCOUNTS",
+      "DisplayName": "Trading account Banner Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TRADINGACCOUNTS",
+          "Name": "TRADINGACCOUNTS",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TradingaccountsBlock",
+      "DisplayName": "Trading accounts VIP Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TradingaccountsBlock",
+          "Name": "TradingaccountsBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "TradingaccountsVIPList"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TradingaccountsVIPList",
+      "DisplayName": "Trading accounts VIP List",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TradingaccountsVIPList",
+          "Name": "TradingaccountsVIPList",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AccountsBlock",
+      "DisplayName": "AccountsBlockItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AccountsBlock",
+          "Name": "AccountsBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "2"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "AccountsBlockDoubleTextField"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AccountsBlockDoubleTextField",
+      "DisplayName": "AccountsBlockDoubleTextField",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AccountsBlockDoubleTextField",
+          "Name": "AccountsBlockDoubleTextField",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AccountsTradingBlock",
+      "DisplayName": "Accounts Trading Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AccountsTradingBlock",
+          "Name": "AccountsTradingBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "AccountsBlock"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TradingTerminalBannerBlock",
+      "DisplayName": "TradingTerminalBannerBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TradingTerminalBannerBlock",
+          "Name": "TradingTerminalBannerBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MoreTradingTerminalBlock",
+      "DisplayName": "More Trading Terminal Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "MoreTradingTerminalBlock",
+          "Name": "MoreTradingTerminalBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "MoreTradingTerminalItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MoreTradingTerminalItem",
+      "DisplayName": "More Trading Terminal Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "MoreTradingTerminalItem",
+          "Name": "MoreTradingTerminalItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AdvantagesBlock",
+      "DisplayName": "AdvantagesBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AdvantagesBlock",
+          "Name": "AdvantagesBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "2"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "AdvantagesItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AdvantagesItem",
+      "DisplayName": "AdvantagesItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AdvantagesItem",
+          "Name": "AdvantagesItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TerminalcardsItem",
+      "DisplayName": "Terminal cards Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TerminalcardsItem",
+          "Name": "TerminalcardsItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TerminalcardsBlock",
+      "DisplayName": "Terminal cards Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TerminalcardsBlock",
+          "Name": "TerminalcardsBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "2"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "TerminalcardsItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TerminalDownloadMetatrader",
+      "DisplayName": "TerminalDownloadMetatraderBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TerminalDownloadMetatrader",
+          "Name": "TerminalDownloadMetatrader",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "investorBannerBlock",
+      "DisplayName": "investorBannerBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "investorBannerBlock",
+          "Name": "investorBannerBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "InvestorgetprofitBlock",
+      "DisplayName": "Investor get profit Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "InvestorgetprofitBlock",
+          "Name": "InvestorgetprofitBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "2"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "InvestorgetprofitItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "InvestorgetprofitItem",
+      "DisplayName": "InvestorgetprofitItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "InvestorgetprofitItem",
+          "Name": "InvestorgetprofitItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AnewapproachtoinvestmentsItem",
+      "DisplayName": "A new approach to investments Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AnewapproachtoinvestmentsItem",
+          "Name": "AnewapproachtoinvestmentsItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AnewapproachtoinvestmentsBlock",
+      "DisplayName": "A new approach to investments Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AnewapproachtoinvestmentsBlock",
+          "Name": "AnewapproachtoinvestmentsBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "AnewapproachtoinvestmentsItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "InvestorCopyTransactionItem",
+      "DisplayName": "Investor Copy Transaction Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "InvestorCopyTransactionItem",
+          "Name": "InvestorCopyTransactionItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "InvestorCopyTransactionBlock",
+      "DisplayName": "Investor Copy Transaction Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "InvestorCopyTransactionBlock",
+          "Name": "InvestorCopyTransactionBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "InvestorCopyTransactionItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "WeWillProtectBlock",
+      "DisplayName": "We Will Protect Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "WeWillProtectBlock",
+          "Name": "WeWillProtectBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BestTraderItem",
+      "DisplayName": "BestTraderItem",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "BestTraderItem",
+          "Name": "BestTraderItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "2"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "AccountsBlockDoubleTextField"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BestTradersBlock",
+      "DisplayName": "Best Traders Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "BestTradersBlock",
+          "Name": "BestTradersBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "BestTraderItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CopyingthebesttradersItem",
+      "DisplayName": "Copying the best traders Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "CopyingthebesttradersItem",
+          "Name": "CopyingthebesttradersItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CopyingthebesttradersBlock",
+      "DisplayName": "Copying the best traders Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "CopyingthebesttradersBlock",
+          "Name": "CopyingthebesttradersBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "CopyingthebesttradersItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutCompanyBlock",
+      "DisplayName": "AboutCompanyBlock",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AboutCompanyBlock",
+          "Name": "AboutCompanyBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "aboutqouteBlock",
+      "DisplayName": "about-qoute Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "aboutqouteBlock",
+          "Name": "aboutqouteBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutVizaviServices",
+      "DisplayName": "About Vizavi Services",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AboutVizaviServices",
+          "Name": "AboutVizaviServices",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "AboutVizaviServiceItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutVizaviServiceItem",
+      "DisplayName": "About Vizavi Service Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AboutVizaviServiceItem",
+          "Name": "AboutVizaviServiceItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutloyaltyBlock",
+      "DisplayName": "About loyalty Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AboutloyaltyBlock",
+          "Name": "AboutloyaltyBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CompanydevelopmentPlanBlock",
+      "DisplayName": "Company development Plan Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "CompanydevelopmentPlanBlock",
+          "Name": "CompanydevelopmentPlanBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "CompanydevelopmentPlanItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CompanydevelopmentPlanItem",
+      "DisplayName": "Company development Plan Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "CompanydevelopmentPlanItem",
+          "Name": "CompanydevelopmentPlanItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BusinessmodelBlock",
+      "DisplayName": "Business model Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "BusinessmodelBlock",
+          "Name": "BusinessmodelBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "OurvalueItem",
+      "DisplayName": "Our-value Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "OurvalueItem",
+          "Name": "OurvalueItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "OurvalueBlock",
+      "DisplayName": "Our-value Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "OurvalueBlock",
+          "Name": "OurvalueBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "OurvalueItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutCompanyAwards",
+      "DisplayName": "About Company Awards",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "AboutCompanyAwards",
+          "Name": "AboutCompanyAwards",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "AwardsItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PartnersbannerBlock",
+      "DisplayName": "Partners banner Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "PartnersbannerBlock",
+          "Name": "PartnersbannerBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PartnersinfoBlock",
+      "DisplayName": "Partners info Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "PartnersinfoBlock",
+          "Name": "PartnersinfoBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VizaviaffiliateprogramBlock",
+      "DisplayName": "Vizavi affiliate program Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "VizaviaffiliateprogramBlock",
+          "Name": "VizaviaffiliateprogramBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "VizaviaffiliateprogramItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VizaviaffiliateprogramItem",
+      "DisplayName": "Vizavi affiliate program Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "VizaviaffiliateprogramItem",
+          "Name": "VizaviaffiliateprogramItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Bestpartnershipconditions",
+      "DisplayName": "Best partnership conditions",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Bestpartnershipconditions",
+          "Name": "Bestpartnershipconditions",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "WhatyouwillgetBlock",
+      "DisplayName": "What you will get Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "WhatyouwillgetBlock",
+          "Name": "WhatyouwillgetBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "Whatyouwillgetitem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Whatyouwillgetitem",
+      "DisplayName": "What you will get Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Whatyouwillgetitem",
+          "Name": "Whatyouwillgetitem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PartnersreasonItem",
+      "DisplayName": "Partners reason Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "PartnersreasonItem",
+          "Name": "PartnersreasonItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PartnersreasonBlock",
+      "DisplayName": "Partners reason Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "PartnersreasonBlock",
+          "Name": "PartnersreasonBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "PartnersreasonItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SafetyofcustomerfundsBanner",
+      "DisplayName": "Safety of customer funds Banner",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "SafetyofcustomerfundsBanner",
+          "Name": "SafetyofcustomerfundsBanner",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProfitabilityBlock",
+      "DisplayName": "Profitability Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "ProfitabilityBlock",
+          "Name": "ProfitabilityBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SafetyItem",
+      "DisplayName": "Safety Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "SafetyItem",
+          "Name": "SafetyItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SafetyCards",
+      "DisplayName": "Safety Cards",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "SafetyCards",
+          "Name": "SafetyCards",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "2"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "SafetyItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Documents",
+      "DisplayName": "Documents Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Documents",
+          "Name": "Documents",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "2"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "DocumentItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "DocumentItem",
+      "DisplayName": "Document Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "DocumentItem",
+          "Name": "DocumentItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "FeedBack",
+      "DisplayName": "FeedBack",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "FeedBack",
+          "Name": "FeedBack",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "FlowPart",
+          "Name": "FlowPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "foooter",
+      "DisplayName": "footer",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "foooter",
+          "Name": "foooter",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Banner",
+      "DisplayName": "Banner Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Banner",
+          "Name": "Banner",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "BannerItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BannerItem",
+      "DisplayName": "Banner Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "BannerItem",
+          "Name": "BannerItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BannerfeaturesItem",
+      "DisplayName": "Banner features Item",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "BannerfeaturesItem",
+          "Name": "BannerfeaturesItem",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BannerfeaturesBlock",
+      "DisplayName": "Banner features Block",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "BannerfeaturesBlock",
+          "Name": "BannerfeaturesBlock",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "BannerfeaturesItem"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Cookie",
+      "DisplayName": "Cookie",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Cookie",
+          "Name": "Cookie",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2",
+              "Editor": "Wysiwyg"
+            },
+            "HtmlBodyPartSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SEO",
+      "DisplayName": "SEO",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "SEO",
+          "Name": "SEO",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "SEOpage"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SEOpage",
+      "DisplayName": "SEO-page",
+      "Settings": {
+        "ContentTypeSettings": {},
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "SEOpage",
+          "Name": "SEOpage",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "ContentPartDefinitionRecords": [
+    {
+      "Name": "LiquidPart",
+      "Settings": {
+        "ContentPartSettings": {}
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "CommonPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides an editor for the common properties of a content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "AliasPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a way to define custom aliases for content items."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "AutoroutePart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a custom url for your content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "PreviewPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a way to define the url that is used to render your content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "WidgetsListPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a way to add widgets per content items."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "FlowPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a customizable body for your content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "BagPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Reusable": true,
+          "Description": "Provides a collection behavior for your content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "HtmlBodyPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides an HTML Body for your content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "ListPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Add a list behavior."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "MarkdownBodyPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a Markdown formatted body for your content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "TitlePart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a Title for your content item.",
+          "DefaultPosition": "0"
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "MenuPart",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "MenuItemPart",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "LinkMenuItemPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a menu link behavior for your content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "FormPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Turns your content item into a form."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "FormElementPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Provides attributes common to all form elements."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "FormInputElementPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Provides attributes common to all input form elements."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "LabelPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Provides label properties."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "InputPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Provides input field properties."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "TextAreaPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Provides text area properties."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "SelectPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Provides select field properties."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "ButtonPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Provides button properties."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "ValidationSummaryPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Displays a validation summary."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "ValidationPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Description": "Displays a field validation error."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "SitemapPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides an optional part that allows content items to be excluded, or configured, on a content item."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "LocalizationPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Provides a way to create localized version of content."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "Mainfeatures",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "iconMainfeatures",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconMainfeatures",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SmartphoneBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Head",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Head",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "HtmlFieldTrumbowygEditorSettings": {
+              "Options": "{\r\n    autogrow: true,\r\n    btns: [\r\n        [\"viewHTML\"],\r\n        [\"undo\", \"redo\"],\r\n        [\"formatting\"],\r\n        [\"strong\", \"em\", \"del\"],\r\n        [\"foreColor\", \"backColor\"],\r\n        [\"superscript\", \"subscript\"],\r\n        [\"link\"],\r\n        [\"image\"],\r\n        [\"align\"],\r\n        [\"unorderedList\", \"orderedList\"],\r\n        [\"horizontalRule\"],\r\n        [\"removeformat\"],\r\n        [\"fullscreen\"]\r\n    ],\r\n    btnsDef: {\r\n        align: {\r\n            dropdown: [\"justifyLeft\", \"justifyCenter\", \"justifyRight\", \"justifyFull\"],\r\n            ico: \"justifyLeft\"\r\n        },\r\n        image: {\r\n            dropdown: [\"insertImage\", \"base64\", \"noembed\"],\r\n            ico: \"insertImage\"\r\n        }\r\n    }\r\n}"
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MARKETSItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "MARKETSButton",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "MARKETS Button",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "MARKETSicon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "MARKETS icon",
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "POPULARTERMINAL",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "WindowsDownload",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Windows Download",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iOSDownload",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iOS Download",
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "AndroidDownload",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Android Download",
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "FieldName": "MediaField",
+          "Name": "image",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "image",
+              "Position": "5"
+            },
+            "ContentIndexSettings": {},
+            "MediaFieldSettings": {
+              "Multiple": false
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "HandlerButtons",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Handler Buttons",
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "securityItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "securityBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SteppItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "traderItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "Yourprofit",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Your profit",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Connectedinvestors",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Connected investors",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Tradersprofit",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Trader's profit",
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TradersBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "ButtonCopyTransaction",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Button Copy Transaction",
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "StartTradingItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AwardsItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "footertext",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "footer text",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "TextArea",
+              "Position": "0"
+            },
+            "TextFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TRADINGACCOUNTS",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "tradingaccountbutton",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "TRADING ACCOUNT",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "DEMOACCOUNTBUTTON",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "DEMO ACCOUNT",
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TradingaccountsBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "TitleBlock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title Block",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "DescriptionBlock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description Block",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Titleleftblock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title left block",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Descriptionleftblock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description left block",
+              "Editor": "TextArea",
+              "Position": "3"
+            },
+            "TextFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Buttonleftblock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Button left block",
+              "Position": "4"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AccountsBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "ButtonCaption",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "ButtonCaption",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AccountsBlockDoubleTextField",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "leftTextField",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "leftTextField",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "rightTextField",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "rightTextField",
+              "Editor": "TextArea",
+              "Position": "1"
+            },
+            "TextFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TradingTerminalBannerBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "DownloadHeader",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Download Header",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "LinkField",
+          "Name": "WindowsDownload",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Windows Download",
+              "Position": "1"
+            },
+            "LinkFieldSettings": {
+              "LinkTextMode": 1,
+              "DefaultUrl": "https://download.mql5.com/cdn/web/12591/mt5/vzvimpex5setup.exe",
+              "DefaultText": "Windows"
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "LinkField",
+          "Name": "iOSDownload",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iOSDownload",
+              "Position": "2"
+            },
+            "LinkFieldSettings": {
+              "LinkTextMode": 1,
+              "DefaultUrl": "https://download.mql5.com/cdn/mobile/mt5/ios?server=VZVImpex-MetaTrader5",
+              "DefaultText": "iPhone"
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "LinkField",
+          "Name": "AndroidDownload",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Android Download",
+              "Position": "3"
+            },
+            "LinkFieldSettings": {
+              "LinkTextMode": 1,
+              "DefaultUrl": "https://download.mql5.com/cdn/mobile/mt5/android?server=VZVImpex-MetaTrader5",
+              "DefaultText": "Android"
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MoreTradingTerminalBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MoreTradingTerminalItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "NumericField",
+          "Name": "count",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "count",
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AdvantagesItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "NumericField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon Width",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "NumericField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon Height",
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AdvantagesBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TerminalcardsItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "NumericField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconWidth",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "NumericField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconHeight",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "MediaField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon"
+            },
+            "ContentIndexSettings": {},
+            "MediaFieldSettings": {
+              "Multiple": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TerminalDownloadMetatrader",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "MediaField",
+          "Name": "image",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "image",
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "investorBannerBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "button",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "button",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "InvestorgetprofitBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "InvestorgetprofitItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconWidth",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconHeight",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Position": "4"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AnewapproachtoinvestmentsBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "TitleBlock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title Block",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Titleleftblock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title left block",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Descriptionleftblock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description left block",
+              "Editor": "Wysiwyg",
+              "Position": "2"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Buttonleftblock",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Button left block",
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "InvestorCopyTransactionItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconWidth",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconHeight",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "3"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "InvestorCopyTransactionBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "WeWillProtectBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "button",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "button",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "MediaField",
+          "Name": "image",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "image",
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BestTraderItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "rating",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "rating",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BestTradersBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "aboutqouteBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "MediaField",
+          "Name": "photo",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "photo",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "qoute",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "qoute",
+              "Editor": "Wysiwyg",
+              "Position": "2"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "quoteauthor",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "quote author",
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "FieldName": "MediaField",
+          "Name": "signature",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "signature",
+              "Position": "4"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutVizaviServices",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutVizaviServiceItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconWidth",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconHeight",
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CompanydevelopmentPlanBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BusinessmodelBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "qoute",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "qoute",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "qouteauth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "qoute auth",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "2"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "OurvalueBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Descriptiontop",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description top",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Descriptionbutton",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description button",
+              "Editor": "Wysiwyg",
+              "Position": "2"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutCompanyAwards",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PartnersbannerBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "button",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "button",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PartnersinfoBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "reservefund",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "reserve fund",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VizaviaffiliateprogramBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VizaviaffiliateprogramItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconWidth",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconHeight",
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Bestpartnershipconditions",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "MediaField",
+          "Name": "image",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "image",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "WhatyouwillgetBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Whatyouwillgetitem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconWidth",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconHeight",
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PartnersreasonBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SafetyofcustomerfundsBanner",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "LinkField",
+          "Name": "buttonopenaccount",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "button open account",
+              "Position": "2"
+            },
+            "LinkFieldSettings": {
+              "DefaultUrl": "https://my.vizavi.com/registration",
+              "DefaultText": "Open account"
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "LinkField",
+          "Name": "buttondemoaccount",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "button demo account",
+              "Position": "3"
+            },
+            "LinkFieldSettings": {
+              "DefaultUrl": "https://my.vizavi.com/registration",
+              "DefaultText": "Demo account"
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProfitabilityBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "MediaField",
+          "Name": "image",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "image",
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SafetyItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconWidth",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconHeight",
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "DocumentItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "MediaField",
+          "Name": "document",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "document",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Documents",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "FeedBack",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "foooter",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "footerdisclaimer",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "footer-disclaimer",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "footerinfo",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "footer-info",
+              "Editor": "Wysiwyg",
+              "Position": "2"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "MediaField",
+          "Name": "footerpayment",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "footer-payment-",
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "copyright",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "copyright",
+              "Editor": "Wysiwyg",
+              "Position": "4"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Butoonstartrading",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Button start rading",
+              "Position": "0"
+            },
+            "TextFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Europeanbroker",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "EuropeanbrokerBlock",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BannerItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Editor": "Wysiwyg",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Editor": "Wysiwyg",
+              "Position": "1"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Button",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Button",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Additionaldescription",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Additional description",
+              "Editor": "Wysiwyg",
+              "Position": "3"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BannerfeaturesItem",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "icon",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "icon",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconWidth",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconWidth",
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "iconHeight",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "iconHeight",
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Position": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Cookie",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "buttondetails",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "button_details",
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SEOpage",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "description",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "keywords",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "keywords",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "URL",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "URL",
+              "Position": "0"
+            },
+            "TextFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    }
+  ],
+  "Serial": 1702
+}

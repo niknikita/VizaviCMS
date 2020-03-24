@@ -1,0 +1,285 @@
+@page
+@inject OrchardCore.IOrchardHelper Orchard
+@{
+    ViewData["Title"] = "Safety of customer funds Vizavi";
+    var CultureName = @Orchard.CultureName();
+}
+
+
+    <div class="headline headline--safety">
+        @{
+            var safedyofcustomerfunds = await Orchard.GetContentItemByAliasAsync("alias:safedyofcustomerfunds-" + CultureName);
+            var safedyofcustomerfundsContent = safedyofcustomerfunds.Content;
+        }
+        
+        
+        <div class="headline__wrap">
+            
+            <div class="headline__content">
+                @Html.Raw(safedyofcustomerfundsContent.SafetyofcustomerfundsBanner.Title.Html)
+
+                @Html.Raw(safedyofcustomerfundsContent.SafetyofcustomerfundsBanner.Description.Html)
+                
+
+                <div class="headline__actions headline-actions">
+                    
+                    <div class="headline-actions__buttons">
+                        <a class="button button-red" href="@safedyofcustomerfundsContent.SafetyofcustomerfundsBanner.buttonopenaccount.Url">
+                        @safedyofcustomerfundsContent.SafetyofcustomerfundsBanner.buttonopenaccount.Text</a>
+                        <a class="button button-light" href="@safedyofcustomerfundsContent.SafetyofcustomerfundsBanner.buttondemoaccount.Url">
+                        @safedyofcustomerfundsContent.SafetyofcustomerfundsBanner.buttondemoaccount.Text</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+
+        <div class="headline-flag"></div>
+        
+    </div>
+
+
+
+    <div class="text-safety">
+        @{
+            var profitability = await Orchard.GetContentItemByAliasAsync("alias:profitability-" + CultureName);
+            var profitabilityContent = profitability.Content;
+        }
+        
+        
+        <div class="text-safety__wrap">
+            
+            <div class="text-safety__notchoose flex flex-center">
+                
+                <div class="text-safety__notchoose-text">
+                    
+                    <div class="intro-box text-left p-decor">
+                        @Html.Raw(profitabilityContent.ProfitabilityBlock.Title.Html)
+
+                        @Html.Raw(profitabilityContent.ProfitabilityBlock.Description.Html)
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="text-safety__notchoose-pic">
+                    
+                    <div class="text-safety__notchoose-img"><img alt="" src="/media/@profitabilityContent.ProfitabilityBlock.image.Paths[0]" /></div>
+                    
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="text-safety__cards flag-cards">
+                @{
+                    var safetycards = await Orchard.GetContentItemByAliasAsync("alias:safety-cards-" + CultureName);
+                    var safetycardsContent = safetycards.Content.BagPart.ContentItems;
+                }
+                
+                
+                <div class="flag-card">
+                    
+                    <div class="flag-card__box">
+                        
+                        <div class="flag-card__icon">
+                            
+                            <div class="flag-card__icon-box">
+                                <svg height="@safetycardsContent[0].SafetyItem.iconHeight.Text" width="@safetycardsContent[0].SafetyItem.iconWidth.Text">
+                                    <use xlink:href="#@safetycardsContent[0].SafetyItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__headline">
+                            <h3 class="h4">@safetycardsContent[0].TitlePart.Title</h3>
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__body">
+                            @Html.Raw(safetycardsContent[0].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="flag-card bg-dark">
+                    
+                    <div class="flag-card__box">
+                        
+                        <div class="flag-card__icon">
+                            
+                            <div class="flag-card__icon-box">
+                                <svg height="@safetycardsContent[1].SafetyItem.iconHeight.Text" width="@safetycardsContent[1].SafetyItem.iconWidth.Text">
+                                    <use xlink:href="#@safetycardsContent[1].SafetyItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__headline">
+                            <h3 class="h4">@safetycardsContent[1].TitlePart.Title</h3>
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__body">
+                            @Html.Raw(safetycardsContent[1].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="flag-card bg-red">
+                    
+                    <div class="flag-card__box">
+                        
+                        <div class="flag-card__icon">
+                            
+                            <div class="flag-card__icon-box">
+                                <svg height="@safetycardsContent[2].SafetyItem.iconHeight.Text" width="@safetycardsContent[2].SafetyItem.iconWidth.Text">
+                                    <use xlink:href="#@safetycardsContent[2].SafetyItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__headline">
+                            <h3 class="h4">@safetycardsContent[2].TitlePart.Title</h3>
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__body">
+                            @Html.Raw(safetycardsContent[2].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="flag-card bg-red">
+                    
+                    <div class="flag-card__box">
+                        
+                        <div class="flag-card__icon">
+                            
+                            <div class="flag-card__icon-box">
+                                <svg height="@safetycardsContent[3].SafetyItem.iconHeight.Text"
+                                     style="position: relative; left: 3px; top: 2px;" width="@safetycardsContent[3].SafetyItem.iconWidth.Text">
+                                    <use xlink:href="#@safetycardsContent[3].SafetyItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__headline">
+                            <h3 class="h4">@safetycardsContent[3].TitlePart.Title</h3>
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__body">
+                            @Html.Raw(safetycardsContent[3].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="flag-card">
+                    
+                    <div class="flag-card__box">
+                        
+                        <div class="flag-card__icon">
+                            
+                            <div class="flag-card__icon-box">
+                                <svg height="@safetycardsContent[4].SafetyItem.iconHeight.Text" width="@safetycardsContent[4].SafetyItem.iconWidth.Text">
+                                    <use xlink:href="#@safetycardsContent[4].SafetyItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    </use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__headline">
+                            <h3 class="h4">@safetycardsContent[4].TitlePart.Title</h3>
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__body">
+                            @Html.Raw(safetycardsContent[4].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="flag-card bg-dark">
+                    
+                    <div class="flag-card__box">
+                        
+                        <div class="flag-card__icon">
+                            
+                            <div class="flag-card__icon-box">
+                                <svg height="@safetycardsContent[5].SafetyItem.iconHeight.Text" width="@safetycardsContent[5].SafetyItem.iconWidth.Text">
+                                    <use xlink:href="#@safetycardsContent[5].SafetyItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    </use>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__headline">
+                            <h3 class="h4">@safetycardsContent[5].TitlePart.Title</h3>
+                        </div>
+                        
+                        
+
+                        <div class="flag-card__body">
+                            @Html.Raw(safetycardsContent[5].HtmlBodyPart.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+

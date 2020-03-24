@@ -1,0 +1,303 @@
+@page
+@inject OrchardCore.IOrchardHelper Orchard
+@{
+    ViewData["Title"] = "To partners";
+    var CultureName = @Orchard.CultureName();
+}
+
+
+    <div class="headline headline--partners">
+        @{
+            var partnersBanner = await Orchard.GetContentItemByAliasAsync("alias:partners-banner-" + CultureName);
+            var partnersBannerContent = partnersBanner.Content;
+        }
+        
+        
+        <div class="headline__wrap">
+            
+            <div class="headline__content">
+                <h1 class="h2">@partnersBannerContent.TitlePart.Title</h1>
+                @Html.Raw(partnersBannerContent.HtmlBodyPart.Html)
+                
+
+                <div class="headline__actions headline-actions mh">
+                    <a class="button button-red"
+                       href="https://my.vizavi.com/registration">@partnersBannerContent.PartnersbannerBlock.button.Text</a>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+
+        <div class="headline__actions headline-actions mv">
+            <a class="button button-red"
+               href="https://my.vizavi.com/registration">@partnersBannerContent.PartnersbannerBlock.button.Text</a>
+        </div>
+    </div>
+
+
+
+    <div class="partners-info">
+        @{
+            var partnersinfo = await Orchard.GetContentItemByAliasAsync("alias:partners-info-" + CultureName);
+            var partnersinfoContent = partnersinfo.Content;
+        }
+       
+        
+        <div class="partners-info__wrap">
+            
+            <div class="partners-info__info">
+                
+                <div class="partners-info__cloud">
+                    
+                    <div class="partners-info__cloud-box">
+                        
+                        <div class="partners-info__cloud-icon">
+                            <svg height="75" width="62">
+                                <use xlink:href="#i_diamond" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </div>
+                        
+                        
+
+                        <div class="partners-info__cloud-content">
+                            @Html.Raw(partnersinfoContent.PartnersinfoBlock.Description.Html)
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="partners-info__remuneration">
+                    
+                    <div class="partners-info__remuneration-box">
+                        @Html.Raw(partnersinfoContent.PartnersinfoBlock.reservefund.Html)
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="partners-steps">
+        @{
+            var affiliateProgram = await Orchard.GetContentItemByAliasAsync("alias:affiliate-program-" + CultureName);
+            var affiliateProgramContent = affiliateProgram.Content;
+        }
+
+        
+        <div class="partners-steps__bg"></div>
+        
+        
+
+        <div class="partners-steps__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(@affiliateProgramContent.VizaviaffiliateprogramBlock.Title.Html)
+            </div>
+            
+            
+            @{ 
+                int number = 1;
+            }
+            <div class="partners-steps__cards number-cards number-cards--width-header">
+                @foreach (var item in affiliateProgramContent.BagPart.ContentItems)
+                {
+                    
+                    <div class="number-card">
+                        
+                        <div class="number-card__box">
+                            
+                            <div class="number-card__header">
+                                
+                                <div class="number-card__header-icon">
+                                    <svg height="@item.VizaviaffiliateprogramItem.iconHeight.Text" width="@item.VizaviaffiliateprogramItem.iconWidth.Text">
+                                        <use xlink:href="#@item.VizaviaffiliateprogramItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </div>
+                                
+                                
+
+                                <div class="number-card__header-title">@Html.Raw(item.DisplayText)</div>
+                                
+                            </div>
+                            
+                            
+
+                            <div class="number-card__body">
+                                
+                                <div class="number-card__number">@number</div>
+                                
+                                
+
+                                <div class="number-card__content">
+                                    @Html.Raw(item.HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    number++;
+                }
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="partners-good">
+        @{
+            var bestPartnershipConditions = await Orchard.GetContentItemByAliasAsync("alias:best-partnership-conditions-" + CultureName);
+            var bestPartnershipConditionsContent = bestPartnershipConditions.Content;
+        }
+        
+        
+        <div class="partners-good__wrap flex flex-center">
+            
+            <div class="partners-good__description">
+                
+                <div class="intro-box text-left p-decor">
+                    @Html.Raw(bestPartnershipConditionsContent.Bestpartnershipconditions.Title.Html)
+
+                    @Html.Raw(bestPartnershipConditionsContent.Bestpartnershipconditions.Description.Html)
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="partners-good__pic">
+                
+                <div class="partners-good__pic-img">
+                    <img alt="Best partnership conditions"
+                         src="/media/@bestPartnershipConditionsContent.Bestpartnershipconditions.image.Paths[0]" />
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="partners-start">
+        @{
+            var Whatyouwillget = await Orchard.GetContentItemByAliasAsync("alias:Whatyouwillget-" + CultureName);
+            var WhatyouwillgetContent = Whatyouwillget.Content;
+        }
+        
+        
+        <div class="partners-start__bg"></div>
+        
+        
+
+        <div class="partners-start__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(WhatyouwillgetContent.WhatyouwillgetBlock.Title.Html)
+            </div>
+            
+            
+
+            <div class="partners-start__cards">
+                
+                <div class="icon-cards icon-cards--three icon-cards--dark">
+                    @foreach (var item in WhatyouwillgetContent.BagPart.ContentItems)
+                    {
+                        
+                        <div class="icon-card">
+                            
+                            <div class="icon-card__box">
+                                
+                                <div class="icon-card__icon">
+                                    
+                                    <div class="icon-card__icon-ico">
+                                        <svg height="@item.Whatyouwillgetitem.iconHeight.Text" width="@item.Whatyouwillgetitem.iconWidth.Text">
+                                            <use xlink:href="#@item.Whatyouwillgetitem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                        </svg>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+
+                                <div class="icon-card__content">
+                                    @Html.Raw(@item.HtmlBodyPart.Html)
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    }
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="partners-reason">
+        @{
+            var partnersreason = await Orchard.GetContentItemByAliasAsync("alias:partners-reason-" + CultureName);
+            var partnersreasonContent = partnersreason.Content;
+        }
+        
+        
+        <div class="partners-reason__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(partnersreasonContent.PartnersreasonBlock.Title.Html)
+            </div>
+            
+            
+
+            <div class="partners-reason__list">
+                <ul class="plan-list plan-list--arrow">
+                    @{
+                        int planItemNumber = 1;
+                    }
+                    @foreach (var item in partnersreasonContent.BagPart.ContentItems)
+                    {
+                        <li class="plan-list__item">
+                            <div class="plan-list__box">
+                                <div class="plan-list__box-decor">
+                                    <div class="plan-list__content">
+                                        <div class="plan-list__point">@planItemNumber</div>
+
+                                        <div class="plan-list__info">
+                                            @Html.Raw(item.HtmlBodyPart.Html)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        planItemNumber++;
+                    }
+                    
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+

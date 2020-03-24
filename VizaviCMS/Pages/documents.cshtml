@@ -1,0 +1,45 @@
+@page
+@inject OrchardCore.IOrchardHelper Orchard
+@{
+    ViewData["Title"] = "REGULATORY DOCUMENTS Vizavi";
+    var CultureName = @Orchard.CultureName();
+}
+<title>REGULATORY DOCUMENTS Vizavi</title>
+@{
+    var Documents = await Orchard.GetContentItemByAliasAsync("alias:documents-" + CultureName);
+    var DocumentsContent = Documents.Content;
+}
+
+
+<div class="text-page">
+    
+    <div class="text-page__wrap">
+        
+        <div class="text-page__content text-content">
+            @Html.Raw(DocumentsContent.Documents.Title.Html)
+
+            @Html.Raw(DocumentsContent.Documents.Description.Html)
+            
+
+            <div class="list-box">
+
+                
+                <ul class="list-mini">
+                    @foreach (var item in DocumentsContent.BagPart.ContentItems)
+                    {
+                        <li class="list-mini__item">
+                            <a class="doc-link doc-link--pdf" href="/media/@item.DocumentItem.document.Paths[0]">
+                                <span class="doc-link__icon"></span>
+                                <span class="doc-link__name">@item.DisplayText</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+

@@ -1,0 +1,424 @@
+@page
+@inject OrchardCore.IOrchardHelper Orchard
+@{
+    ViewData["Title"] = "To Investor Vizavi";
+    var CultureName = @Orchard.CultureName();
+}
+
+
+
+    <div class="headline headline--investor">
+        @{
+            var investorBanner = await Orchard.GetContentItemByAliasAsync("alias:investorBanner-" + CultureName);
+            var investorBannerContent = investorBanner.Content;
+        }
+
+        
+        <div class="headline__wrap">
+            
+            <div class="headline__content">
+                <h1 class="h2">@investorBannerContent.TitlePart.Title</h1>
+
+                @Html.Raw(investorBannerContent.HtmlBodyPart.Html)
+                
+
+                <div class="headline__actions headline-actions">
+                    <a class="button button-red"
+                       href="https://my.vizavi.com/registration">@investorBannerContent.investorBannerBlock.button.Text</a>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="text-investor">
+        @{
+            var Investorgetprofit = await Orchard.GetContentItemByAliasAsync("alias:Investor-get-profit-" + CultureName);
+            var InvestorgetprofitContent = Investorgetprofit.Content;
+        }
+        
+        
+        <div class="text-investor__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(InvestorgetprofitContent.InvestorgetprofitBlock.Title.Html)
+
+                @Html.Raw(InvestorgetprofitContent.InvestorgetprofitBlock.Description.Html)
+            </div>
+            
+            
+
+            <div class="text-investor__cards">
+                
+                @*<div class="text-investor__left js_slider-left">
+                    <svg fill="none" height="38" width="22"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.523 20.22l17.143 16.902c.762.751 1.905.751 2.667 0 .38-.188.571-.751.571-1.315 0-.563-.19-.939-.571-1.314L5.523 18.906l15.81-15.587c.38-.375.571-.751.571-1.314 0-.564-.19-.94-.571-1.315C20.952.314 20.57.127 20 .127c-.572 0-.953.187-1.334.563L1.523 17.591c-.38.376-.571.752-.571 1.315s.19 1.127.571 1.315z"
+                              fill="currentColor"></path>
+                    </svg>
+                </div>*@
+                
+                
+
+                <div class="text-investor__slider advantage-cards advantage-cards--list ">
+                    @foreach (var item in InvestorgetprofitContent.BagPart.ContentItems)
+                    {
+                        
+                        <div class="advantage-cards__item">
+                            <div class="advantage-card">
+                                
+                                <div class="advantage-card__shadow">
+                                    
+                                    <div class="advantage-card__box">
+                                        
+                                        <div class="advantage-card__icon">
+                                            <svg height="@item.InvestorgetprofitItem.iconHeight.Text" width="@item.InvestorgetprofitItem.iconWidth.Text">
+                                                <use xlink:href="#@item.InvestorgetprofitItem.icon.Text"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                            </svg>
+                                        </div>
+                                        
+                                        
+
+                                        <div class="advantage-card__name">@item.InvestorgetprofitItem.Title.Text</div>
+                                        
+                                        
+
+                                        <div class="advantage-card__body">
+                                            <p>@item.InvestorgetprofitItem.Description.Text</p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    }
+
+                </div>
+                
+                
+
+                @*<div class="text-investor__right js_slider-right">
+                    <svg fill="none" height="38" width="22"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.332 17.78L4.19.877c-.762-.751-1.904-.751-2.666 0-.381.188-.572.751-.572 1.315 0 .563.19.939.572 1.314l15.81 15.587-15.81 15.587c-.381.376-.572.751-.572 1.315 0 .563.19.938.572 1.314.38.376.762.563 1.333.563s.952-.187 1.333-.563l17.143-16.901c.381-.376.572-.752.572-1.315s-.19-1.127-.572-1.315z"
+                              fill="currentColor"></path>
+                    </svg>
+                </div>*@
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="new-method">
+        @{
+            var newapproach = await Orchard.GetContentItemByAliasAsync("alias:new-approach-" + CultureName);
+            var newapproachContent = newapproach.Content;
+        }
+        
+        
+        <div class="new-method__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(newapproachContent.AnewapproachtoinvestmentsBlock.TitleBlock.Html)
+            </div>
+            
+            
+
+            <div class="new-method__bg flex flex-stretch">
+                
+                <div class="new-method__item new-method__info">
+                    
+                    <div class="intro-box text-left p-decor">
+                        <h3 class="h2">@newapproachContent.AnewapproachtoinvestmentsBlock.Titleleftblock.Text</h3>
+
+                        @Html.Raw(newapproachContent.AnewapproachtoinvestmentsBlock.Descriptionleftblock.Html)
+                        
+
+                        <div class="new-method__actions">
+                            <a class="button button-red"
+                               href="https://my.vizavi.com/registration">@newapproachContent.AnewapproachtoinvestmentsBlock.Buttonleftblock.Text</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="new-method__item new-method__list">
+                    <ul class="check-in-circle">
+                        @foreach (var item in newapproachContent.BagPart.ContentItems)
+                        {
+                            <li>@item.TitlePart.Title</li>
+                        }
+
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="copy-transaction">
+        @{
+            var copytransaction = await Orchard.GetContentItemByAliasAsync("alias:InvestorCopyTransaction-" + CultureName);
+            var copytransactionContent = copytransaction.Content;
+        }
+        
+        
+        <div class="copy-transaction__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(copytransactionContent.InvestorCopyTransactionBlock.Title.Html)
+                @Html.Raw(copytransactionContent.InvestorCopyTransactionBlock.Description.Html)
+                
+            </div>
+            
+            
+
+            <div class="copy-transaction__cards">
+                
+                <div class="icon-cards icon-cards--light">
+                    
+                    @foreach(var item in @copytransactionContent.BagPart.ContentItems)
+                    {
+                    <div class="icon-card">
+                        
+                        <div class="icon-card__box">
+                            
+                            <div class="icon-card__icon">
+                                
+                                <div class="icon-card__icon-ico">
+                                    <svg height="@item.InvestorCopyTransactionItem.iconHeight.Text" width="@item.InvestorCopyTransactionItem.iconWidth.Text">
+                                        <use xlink:href="#@item.InvestorCopyTransactionItem.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        </use>
+                                    </svg>
+                                </div>
+                                
+                            </div>
+                            
+                            
+
+                            <div class="icon-card__content">
+                                @Html.Raw(item.InvestorCopyTransactionItem.Description.Html)
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    }
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="cut-bubble">
+        @{
+            var WeWillProtect = await Orchard.GetContentItemByAliasAsync("alias:WeWillProtect-" + CultureName);
+            var WeWillProtectContent = WeWillProtect.Content;
+        }
+        
+        
+        <div class="cut-bubble__wrap flex ">
+            
+            <div class="cut-bubble__message col-half cut-bubble-message cut-bubble-message--investor">
+                
+                <div class="cut-bubble-message__box">
+                    
+                    <div class="cut-bubble-message__content">
+                        @Html.Raw(WeWillProtectContent.WeWillProtectBlock.Title.Html)
+                        @Html.Raw(WeWillProtectContent.WeWillProtectBlock.Description.Html)
+                        
+
+                        <div class="cut-bubble-message__actions">
+                            <a class="button button-light"
+                               href="https://my.vizavi.com/registration">@WeWillProtectContent.WeWillProtectBlock.button.Text</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+
+            <div class="cut-bubble__picture col-half cut-bubble-picture">
+                
+                <div class="cut-bubble-picture__box"><img alt="" src="/media/@WeWillProtectContent.WeWillProtectBlock.image.Paths[0]" /></div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="traders-slider">
+        @{
+            var BestTraiders = await Orchard.GetContentItemByAliasAsync("alias:BestTraders-" + CultureName);
+            var BestTraidersContent = BestTraiders.Content;
+        }
+        
+        
+        <div class="traders-slider__wrap">
+            
+            
+            <div class="intro-box">
+                @Html.Raw(@BestTraidersContent.BestTradersBlock.Title.Html)
+            </div>
+            
+            
+
+            <div class="traders-slider__list">
+                
+                <div class="traders-slider__left js_slider-left">
+                    <svg fill="none" height="38" width="22"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.523 20.22l17.143 16.902c.762.751 1.905.751 2.667 0 .38-.188.571-.751.571-1.315 0-.563-.19-.939-.571-1.314L5.523 18.906l15.81-15.587c.38-.375.571-.751.571-1.314 0-.564-.19-.94-.571-1.315C20.952.314 20.57.127 20 .127c-.572 0-.953.187-1.334.563L1.523 17.591c-.38.376-.571.752-.571 1.315s.19 1.127.571 1.315z"
+                              fill="currentColor"></path>
+                    </svg>
+                </div>
+                
+                
+
+
+                <div class="traders-list js_traders-list owl-carousel">
+                    @foreach (var item in @BestTraidersContent.BagPart.ContentItems)
+                    {
+                        <div class="traders-list__item">
+                            <div class="trader-card">
+                                <div class="trader-card__box">
+
+                                    <div class="trader-card__avatar">
+                                        <img alt="Трейдер Nikita_Profit" height="" src="/assets/images/svg/user-avatar.svg"
+                                             width="" />
+                                    </div>
+
+                                    <div class="trader-card__header">
+                                        <div class="trader-card__header-name">@item.DisplayText</div>
+                                    </div>
+
+                                    <div class="trader-card__graph">
+                                        <div class="trader-card__graph-box graph-container" id="graph-container_5"
+                                             data-graph="[@item.BestTraderItem.rating.Text]">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="trader-card__body">
+                                        @for (var listItem = 0; listItem < item.BagPart.ContentItems.Count; listItem++)
+                                        {
+                                            if (listItem == 0)
+                                            {
+                                                <div class="trader-card__row trader-card__row--full">
+                                                    <div class="trader-card__name">@item.BagPart.ContentItems[listItem].AccountsBlockDoubleTextField.leftTextField.Text</div>
+                                                    <div class="trader-card__value">@item.BagPart.ContentItems[listItem].AccountsBlockDoubleTextField.rightTextField.Text</div>
+                                                </div>
+                                            }
+                                            else if (listItem == 1)
+                                            {
+                                                <div class="trader-card__row is-accent">
+                                                    <div class="trader-card__name">@item.BagPart.ContentItems[listItem].AccountsBlockDoubleTextField.leftTextField.Text</div>
+                                                    <div class="trader-card__value">@item.BagPart.ContentItems[listItem].AccountsBlockDoubleTextField.rightTextField.Text</div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="trader-card__row">
+                                                    <div class="trader-card__name">@item.BagPart.ContentItems[listItem].AccountsBlockDoubleTextField.leftTextField.Text</div>
+                                                    <div class="trader-card__value">@item.BagPart.ContentItems[listItem].AccountsBlockDoubleTextField.rightTextField.Text</div>
+                                                </div>
+                                            }
+                                        }
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    
+                </div>
+                
+
+                <div class="traders-slider__right js_slider-right">
+                    <svg fill="none" height="38" width="22"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.332 17.78L4.19.877c-.762-.751-1.904-.751-2.666 0-.381.188-.572.751-.572 1.315 0 .563.19.939.572 1.314l15.81 15.587-15.81 15.587c-.381.376-.572.751-.572 1.315 0 .563.19.938.572 1.314.38.376.762.563 1.333.563s.952-.187 1.333-.563l17.143-16.901c.381-.376.572-.752.572-1.315s-.19-1.127-.572-1.315z"
+                              fill="currentColor"></path>
+                    </svg>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="best-traders">
+        @{
+            var copyingthebestTraders = await Orchard.GetContentItemByAliasAsync("alias:Copying-the-best-traders-" + CultureName);
+            var copyingthebestTradersContent = copyingthebestTraders.Content;
+        }
+        
+        
+        <div class="best-traders__wrap">
+            
+            <div class="intro-box">
+                @Html.Raw(copyingthebestTradersContent.HtmlBodyPart.Html)
+            </div>
+            
+            
+
+            <div class="best-traders__cards number-cards">
+                @{
+                    int x = 0;
+                }
+                @foreach (var item in copyingthebestTradersContent.BagPart.ContentItems)
+                {
+                    <div class="number-card">
+                        <div class="number-card__box">
+                            <div class="number-card__number">@x</div>
+                            <div class="number-card__content">
+                                <div class="number-card__content-title">@item.DisplayText</div>
+                                <div class="number-card__content-info">@Html.Raw(item.HtmlBodyPart.Html)</div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    x++;
+                    
+                }
+
+            </div>
+            
+        </div>
+        
+    </div>

@@ -1,0 +1,287 @@
+@page
+@{
+    ViewData["Title"] = "Trading Accounts Vizavi";
+}
+@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var CultureName = @Orchard.CultureName();
+}
+
+
+
+    <div class="headline headline--trading-account">
+        @{
+            var banner = await Orchard.GetContentItemByAliasAsync("alias:tradingaccount-" + CultureName);
+            
+        }
+        
+        
+        <div class="headline__wrap">
+            
+            <div class="headline__content">
+                <h1 class="h2">@banner.Content.TitlePart.Title</h1>
+
+                @Html.Raw(banner.Content.HtmlBodyPart.Html)
+                
+
+                <div class="headline__actions headline-actions">
+                    
+                    <div class="headline-actions__icons">
+                        
+                        <div class="icon-circle">
+                            <svg height="19" width="23">
+                                <use xlink:href="#i_money" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </div>
+                        
+                        
+
+                        <div class="icon-circle">
+                            <svg height="20" width="13">
+                                <use xlink:href="#i_bitcoin" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </div>
+                        
+                        
+
+                        <div class="icon-circle">
+                            <svg height="27" width="18">
+                                <use xlink:href="#i_cert" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </div>
+                        
+                        
+
+                        <div class="icon-circle">
+                            <svg height="25" width="22">
+                                <use xlink:href="#i_jewel" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </div>
+                        
+                        
+
+                        <div class="icon-circle">
+                            <svg height="24" width="22">
+                                <use xlink:href="#i_loupe-with-graph" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                </use>
+                            </svg>
+                        </div>
+                        
+                        
+
+                        <div class="icon-circle">
+                            <svg height="24" width="18">
+                                <use xlink:href="#i_candle-on-graph" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                </use>
+                            </svg>
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="headline-actions__buttons">
+                        <a class="button button-red"
+                           href="https://my.vizavi.com/registration">@banner.Content.TRADINGACCOUNTS.tradingaccountbutton.Text</a>
+                        <a class="button button-light" 
+                           href="https://my.vizavi.com/registration">@banner.Content.TRADINGACCOUNTS.DEMOACCOUNTBUTTON.Text</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="trading-account">
+        @{
+            var vipBlock = await Orchard.GetContentItemByAliasAsync("alias:TradingaccountsVIP-" + CultureName);
+            var vipBlockContent = vipBlock.Content;
+        }
+
+        
+        <div class="trading-account__wrap">
+            
+            <div class="trading-account__content text-content">
+                @Html.Raw(vipBlockContent.TradingaccountsBlock.TitleBlock.Html)
+
+                @Html.Raw(vipBlockContent.TradingaccountsBlock.DescriptionBlock.Html)
+            </div>
+            
+            
+
+            <div class="trading-account__info flex flex-stretch trading-account-info">
+                
+                <div class="trading-account__info-item col-half trading-account-info__action">
+                    
+                    <div class="trading-account-info__header">
+                        
+                        <div class="trading-account-info__header-icon">
+                            <svg height="36" width="36">
+                                <use xlink:href="#i_type-demo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </div>
+                        
+                        
+
+                        <div class="trading-account-info__header-title">Vip</div>
+                        
+                    </div>
+                    
+                    
+
+                    <div class="trading-account-info__body">
+                        <h3 class="h2 h2-red">@vipBlockContent.TradingaccountsBlock.Titleleftblock.Text</h3>
+                        <p>@vipBlockContent.TradingaccountsBlock.Descriptionleftblock.Text</p>
+                        
+
+                        <p class="box-button"><a class="button button-red" href="https://my.vizavi.com/registration">@vipBlockContent.TradingaccountsBlock.Buttonleftblock.Text</a></p>
+                    </div>
+                    
+                </div>
+                
+                
+
+                <div class="trading-account__info-item col-half trading-account-info__list">
+                    <ul class="check-in-circle">
+                        @foreach (var item in vipBlockContent.BagPart.ContentItems)
+                        {
+                            <li>@item.DisplayText</li>
+                        }
+                       
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="accounts">
+        @{
+            var accounts = await Orchard.GetContentItemByAliasAsync("alias:AccountsTradingBlock-" + CultureName);
+            var accountsContent = accounts.Content;
+        }
+        
+        
+        <div class="accounts__wrap">
+            
+            <div class="accounts__list flex flex-start">
+                @foreach (var item in @accountsContent.BagPart.ContentItems)
+                {
+                    
+                    
+                    <div class="accounts__item">
+                        
+                        <div class="accounts-type">
+                            
+                            <div class="accounts-type__box">
+                                
+                                <div class="accounts-type__header">
+                                    
+                                    <div class="accounts-type__header-icon">
+                                        <svg height="36" width="36">
+                                            <use xlink:href="#@item.AccountsBlock.icon.Text" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            </use>
+                                        </svg>
+                                    </div>
+                                    
+                                    
+
+                                    <div class="accounts-type__header-title">
+                                        <div class="accounts-type__header-title_name">@item.DisplayText</div>
+
+                                        <div class="accounts-type__header-title_description">@item.AccountsBlock.Description.Text</div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+
+                                <div class="accounts-type__info">
+                                    
+                                    <div class="accounts-type__info-row">
+                                        
+                                        <div class="accounts-type__name">@item.BagPart.ContentItems[0].AccountsBlockDoubleTextField.leftTextField.Text</div>
+                                        
+                                        
+
+                                        <div class="accounts-type__value accounts-type__value--icons">
+                                            <svg height="22"
+                                                 width="22">
+                                                <use xlink:href="#i_windows-logo"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                            </svg> <svg height="22" width="29">
+                                                <use xlink:href="#i_pc" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                </use>
+                                            </svg> <svg height="27" width="22">
+                                                <use xlink:href="#i_android-logo"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                            </svg> <svg height="25" width="21">
+                                                <use xlink:href="#i_apple-logo"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                            </svg>
+                                        </div>
+                                        
+                                    </div>
+                                    
+
+                                    @for (var id = 1; id < @item.BagPart.ContentItems.Count; id++)
+                                    {
+                                        if (id == 1)
+                                        {
+                                            <div class="accounts-type__info-row" style="min-height:150px;">
+                                                <div class="accounts-type__name">
+                                                    @item.BagPart.ContentItems[id].AccountsBlockDoubleTextField.leftTextField.Text
+                                                </div>
+                                                <div class="accounts-type__value">
+                                                    @Html.Raw(item.BagPart.ContentItems[id].AccountsBlockDoubleTextField.rightTextField.Text)
+                                                </div>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="accounts-type__info-row">
+                                                <div class="accounts-type__name">
+                                                    @item.BagPart.ContentItems[id].AccountsBlockDoubleTextField.leftTextField.Text
+                                                </div>
+                                                <div class="accounts-type__value">
+                                                    @Html.Raw(item.BagPart.ContentItems[id].AccountsBlockDoubleTextField.rightTextField.Text)
+                                                </div>
+                                            </div>
+                                        }
+
+                                    }
+
+
+                                </div>
+                                
+                                
+
+                                <div class="accounts-type__action">
+                                    <a class="button button-red"
+                                       href="https://my.vizavi.com/registration">@item.AccountsBlock.ButtonCaption.Text</a>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                }
+            </div>
+            
+        </div>
+        
+    </div>
+
